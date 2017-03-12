@@ -84,8 +84,7 @@ module.exports = function (grunt) {
                 },
                 files: [
                     {
-                        'public/index.html': 'src/templates/index.mustache',
-                       // 'public/cennik.html': 'src/templates/cennik.mustache'
+                        'public/index.html': 'src/templates/index.mustache'
                     }
                 ]
             }
