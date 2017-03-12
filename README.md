@@ -24,4 +24,4 @@ Celem jest stworzenie aplikacji aplikacji do sterowania budynkiem inteligentnym.
 
 HTML, CSS, JS, Bootstrap, SASS, PHP + MySQL, AJAX, Angular2, GRUNT
 
-# [Konfiguracja stanowiska](./konfiguracja-stanowiska-pracy-na-swoim-komputerze)
+# [Konfiguracja stanowiska](https://kask.eti.pg.gda.pl/gitlab_aui/XIV-projekt-grupowy/SmartHome/wikis/konfiguracja-stanowiska-pracy-na-swoim-komputerze)
