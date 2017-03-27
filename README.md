@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Dom Inteligentny
 
 Celem jest stworzenie aplikacji aplikacji do sterowania budynkiem inteligentnym.
@@ -26,7 +25,8 @@ Celem jest stworzenie aplikacji aplikacji do sterowania budynkiem inteligentnym.
 HTML, CSS, JS, Bootstrap, SASS, PHP + MySQL, AJAX, Angular2, GRUNT
 
 # [Konfiguracja stanowiska](https://kask.eti.pg.gda.pl/gitlab_aui/XIV-projekt-grupowy/SmartHome/wikis/konfiguracja-stanowiska-pracy-na-swoim-komputerze)
-=======
+
+
 # SmartHome
 
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.28.3.
@@ -58,4 +58,3 @@ Run `ng github-pages:deploy` to deploy to GitHub Pages.
 ## Further help
 
 To get more help on the `angular-cli` use `ng help` or go check out the [Angular-CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
->>>>>>> PW
