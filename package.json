@@ -1,14 +1,21 @@
 {
   "name": "smart-home",
-  "version": "0.0.0",
-  "license": "MIT",
+  "version": "0.0.1",
+  "author": "smartHome Team",
+  "license": "ISC",
   "angular-cli": {},
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "test": "ng test",
+    "build": "ng build",
     "pree2e": "webdriver-manager update --standalone false --gecko false",
+    "lint": "ng lint",
     "e2e": "protractor"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://kask.eti.pg.gda.pl/gitlab_aui/XIV-projekt-grupowy/SmartHome.git"
   },
   "private": true,
   "dependencies": {
@@ -26,6 +33,7 @@
     "zone.js": "^0.7.2"
   },
   "devDependencies": {
+    "bootstrap": "^3.3.7",
     "@angular/compiler-cli": "^2.3.1",
     "@types/jasmine": "2.5.38",
     "@types/node": "^6.0.42",
