@@ -57,25 +57,6 @@ div.col-sm-2 zegar
 }
 
 
-.zaloguj
-{
-	margin:10px;
-	/*width:230px;*/
-	height:172px;
-	background-color: red;
-	text-align:center;
-}
-
-.zaloguj p
-{
-font-size: 14px;
-}
-.zaloguj:hover
-{
-	background-color: #d4001f;
-	cursor:pointer;
-}
-
 .tile1
 {
 	margin:10px;
