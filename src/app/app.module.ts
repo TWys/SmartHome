@@ -5,11 +5,13 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent
+    HeaderComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -17,6 +19,6 @@ import { HeaderComponent } from './header/header.component';
     HttpModule
   ],
   providers: [],
-  bootstrap: [AppComponent,HeaderComponent]
+  bootstrap: [AppComponent,HeaderComponent,HomeComponent]
 })
 export class AppModule { }
