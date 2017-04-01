@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="pl">
+
+<head>
+<meta charset="UTF-8">
+<title>Aplikacja do zarządzania inteligentnym domem</title>
+<meta name="description" content="Zarządzanie inteligentnym domem">
+<meta name="keywords" content="Inteligentny, dom, zarządzanie, sterowanie">
+<meta name="author" name="Projekt grupowy">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.css">
+<link href="style.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Lato&amp;subset=latin-ext" rel="stylesheet">
+<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+
+
+
+<body onload="clock()">
+<div class="container">
+
+	<div class="row rect">
+		<div class="col-xs-12 col-sm-10 logo">Zarządzanie inteligentnym domem</div>
+		<div class="hidden-xs col-sm-2 zegar">13 mar 2017 19:29</div>
+		<div style="clear:both;"></div>
+	</div>
+
+  <div class="col-xs-12 col-sm-10">
+    <ul class="nav nav-tabs" id="menu">
+      <li class="active"><a href="#">Strona główna</a></li>
+      <li><a href="#">Panel</a></li>
+      <li><a href="#Kontakt">Kontakt</a></li>
+      <li><a href="#">O nas</a></li>
+    </ul>
+  </div>
+
+	<div class="row">
+
+    <div class="hidden-xs col-md-6 col-md-push-6 square">
+		<div class="col-xs-12 tile5" id="tekst">
+			Nazwa panelu (odpowiednia dla klikniętego kafelka)<br/><br/>
+				Tu widziałbym panel do wyświetlania/zarządzania odpowiednimi parametrami, np po kliknięciu kafelka "Temperatura" pokazywałyby się aktualny odczyt oraz elementy do ustawiania temperatury (przyciski pokrętło lub coś takiego)
+		</div>
+	</div>
+
+		<div class="col-xs-12 col-md-6 col-md-pull-6 square">
+			<div class="tiles">
+				<div class="col-xs-12 col-md-5 tile1"><i class="fa fa-thermometer-half" aria-hidden="true"></i><br />Temperatura</div>
+				<div class="col-xs-12 col-md-5 tile1"><i class="fa fa-lightbulb-o" aria-hidden="true"></i><br />Oświetlenie</div>
+				<div style="clear:both;"></div>
+
+				<div class="col-xs-12 col-md-5 tile2"><i class="fa fa-moon-o" aria-hidden="true"></i><br />Rolety</div>
+				<div class="col-xs-12 col-md-5 tile3"><i class="fa fa-tint" aria-hidden="true"></i><br />Wilgotność</div>
+				<div style="clear:both;"></div>
+
+			</div>
+		</div>
+	</div>
+
+	<div style="clear:both;"></div>
+	<br/>
+	<div class="row">
+    <div class="col-xs-12 rect">
+      <a name="Kontakt"></a><h1>Dane kontaktowe</h1> 	<br/>
+      <p><a href="mailto: mail@mail.com">Adres mailowy: mail@mail.com</a></p>
+      <p>Numer kontaktowy: 123 4-6 789</p>
+      <p>Adres firmy: Unnamed Road 1, 80-299 Gdańsk</p> <br/>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d17540.099422435993!2d18.508873246603986!3d54.39433080397501!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x46fd755f9b2ad8ed%3A0xf00103fe8d8d5538!2sUnnamed+Road%2C+Gda%C5%84sk!3m2!1d54.3989392!2d18.5111529!5e0!3m2!1spl!2spl!4v1490700503006" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </div>
+
+    <div class="col-xs-12 rect"><br/>Projekt grupowy AiUI 2017 &copy;</div>
+	</div>
+
+</div>
+</body>
+
+</html>
