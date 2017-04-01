@@ -20,6 +20,12 @@ body
 	text-align: center;
 }
 
+#menu {
+  text-align: center;
+  align-content: center;
+  color: red;
+}
+
 .square
 {
 	/*width:50%;*/
@@ -55,6 +61,7 @@ div.col-sm-2 zegar
 {
 	display:none;
 }
+
 
 
 .tile1
