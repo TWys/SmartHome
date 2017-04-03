@@ -4,8 +4,8 @@
 }
 
 .home {
-  background: url(../../assets/img/house.jpg)center no-repeat;
-  width: 100%;
+  background: url(../../assets/img/house.jpg)center center no-repeat;
+  width: 100vw;
   height: 100vh;
 }
 
