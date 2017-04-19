@@ -1,6 +1,28 @@
 <section id="contact" class="contact" >
 
-    <div class="col-xs-12 rect no-padding">
+  <div class="col-xs-12 rect no-padding">
+
+    <div id="formularz">
+      <h1>Formularz kontaktowy</h1>  <br/>
+      <form method="post" action="contact.component.php">
+
+        <label>Imię i nazwisko</label>
+        <input name="name" placeholder="Smart Home">
+
+        <label>Email</label>
+        <input name="email" type="email" placeholder="mail@smarthome.pl">
+
+        <label>Temat</label>
+        <textarea name="topic" placeholder="Temat wiadomości"></textarea>
+
+        <label>Treść wiadomości</label>
+        <textarea name="message" placeholder="Napisz wiadomość"></textarea>
+
+        <input id="submit" name="submit" type="submit" value="Wyślij">
+
+      </form>
+    </div>
+
       <a name="Kontakt"></a>
       <h1>Dane kontaktowe</h1>  <br/>
       <p><a href="mailto: mail@mail.com">Adres mailowy: mail@mail.com</a></p>
