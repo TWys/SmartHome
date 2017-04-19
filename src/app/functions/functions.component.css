@@ -1,3 +1,24 @@
+@import '../../assets/font-awesome/css/font-awesome.css';
+
+html
+{
+  width: 98%;
+}
+
+body
+{
+  background-color:#303030;
+  color: #ffffff;
+  font-family: 'Lato', sans-serif;
+  font-size:20px;
+}
+
+.container
+{
+  width: 95%!important;
+  /*margin-left:auto;*/
+  /*margin-right:auto;*/
+}
 
 .rect
 {
@@ -5,11 +26,13 @@
   margin:20px;
   text-align: center;
 }
+
 .square
 {
   /*width:50%;*/
   float:left;
 }
+
 .logo
 {
   float:left;
@@ -18,16 +41,19 @@
   /*width: 600px;*/
   text-align:left;
 }
+
 .logo a:hover
 {
   color: #ffffff;
   cursor: pointer;
   text-decoration: none;
 }
+
 .status_bar
 {
   float: right;
 }
+
 .status
 {
   text-align: right;
@@ -35,10 +61,12 @@
   display: inline-block;
   font-size: 15px;
 }
+
 .user_name
 {
   font-weight: bold;
 }
+
 .flag
 {
   padding: 2px;
@@ -46,10 +74,12 @@
   display: inline-block;
   height: 20px;
 }
+
 .flag:hover
 {
   border: 2px solid blue!important;
 }
+
 .zegar
 {
   float:left;
@@ -58,8 +88,118 @@
   text-align:right;
   line-height: 85px;
 }
+
 .clock
 {
   font-family: 'Orbitron', sans-serif;
   color: lightgreen;
 }
+
+.tile1
+{
+  margin:10px;
+  /*width:230px;*/
+  height:142px;
+  background-color: #3095d3;
+  float:left;
+  text-align:center;
+}
+
+.tile1:hover
+{
+  background-color: #2084c2;
+  cursor:pointer;
+}
+
+.tile2
+{
+  margin:10px;
+  /*width:230px;*/
+  height:142px;
+  background-color: #666666;
+  float:left;
+  text-align:center;
+}
+
+.tile2:hover
+{
+  background-color: #555555;
+  cursor:pointer;
+}
+
+.tile3
+{
+  margin:10px;
+  /*width:230px;*/
+  height:142px;
+  background-color: #93c748;
+  text-align:center;
+}
+
+.tile3:hover
+{
+  background-color: #82b637;
+  cursor:pointer;
+}
+
+.tile4
+{
+  margin:10px;
+  background-color: #ee5a32;
+  text-align:center;
+  font-size:26px;
+  padding:30px;
+  line-height:150%;
+}
+
+.tile5
+{
+  margin:10px;
+  /*width:420px;*/
+  /*height:244px;*/
+  background-color: #666666;
+  text-align:justify;
+  padding: 30px;
+}
+
+a
+{
+  text-decoration:none;
+  color: white;
+}
+
+.footer
+{
+  margin:20px;
+  text-align: center;
+}
+
+.fa
+{
+  font-size: 60px!important;
+  padding-top: 30px;
+}
+
+.mapa
+{
+  /*margin-left: auto;*/
+  /*margin-right: auto;*/
+  text-align: center!important;
+  margin: 0 auto!important;
+}
+
+@media (max-width: 768px)
+{
+  .logo
+  {
+    font-size: 40px;
+    text-align: center;
+  }
+
+  .footer
+  {
+    font-size: 15px;
+    text-align: center;
+  }
+}
+
