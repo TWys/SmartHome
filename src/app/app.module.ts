@@ -10,6 +10,7 @@ import { FunctionsComponent } from './functions/functions.component';
 import { AboutComponent } from './about/about.component';
 import { ServicesComponent } from './services/services.component';
 import { FunctionsDescriptionComponent } from './functions-description/functions-description.component';
+import { GalleryComponent } from './gallery/gallery.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { FunctionsDescriptionComponent } from './functions-description/functions
     FunctionsComponent,
     AboutComponent,
     ServicesComponent,
-    FunctionsDescriptionComponent
+    FunctionsDescriptionComponent,
+    GalleryComponent
   ],
   imports: [
     BrowserModule,
