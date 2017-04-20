@@ -1,5 +1,6 @@
 <?php
 
+  // Przypisanie zmiennych POST
   $name = $_POST['name'];
   $email = $_POST['email'];
   $title = $_POST['title'];
@@ -8,6 +9,7 @@
   $od_kogo = "mail@smarthome.pl";
   $do_kogo = "mail@smarthome.pl";
 
+  // Złożenie wiadomości
   $wiadomosc = "";
   $wiadomosc .= "Imie i nazwisko: " . $name . "\n";
   $wiadomosc .= "Email: " . $email . "\n";
@@ -17,11 +19,11 @@
   $sukces = mail($do_kogo, $title, $wiadomosc, "Od: <$od_kogo>");
 
   if ($sukces){
-    print "<meta http-equiv=\"refresh\" content=\"0;URL=potwierdzenie.php\">";
+    print "Wiadomość została wysłana!";
   }
 
   else{
-    print "<meta http-equiv=\"refresh\" content=\"0;URL=error.html\">";
+    print "Błąd! Nie wysłano wiadomości.";
   }
 
 ?>
