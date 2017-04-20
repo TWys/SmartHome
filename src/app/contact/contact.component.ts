@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['../app.component.css','./contact.component.css','../../assets/bootstrap/css/bootstrap.css']
 })
 export class ContactComponent {
- title="Zarządzanie inteligentnym domem"
+  title="Zarządzanie inteligentnym domem"
 }
