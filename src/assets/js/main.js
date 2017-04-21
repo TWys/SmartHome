@@ -1,3 +1,1 @@
-/**
- * Created by Paweł on 21.04.2017.
- */
+$('.parallax-window').parallax({imageSrc: '../../assets/img/team.jpg'});

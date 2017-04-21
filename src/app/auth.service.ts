@@ -1,78 +1,35 @@
-import { Injectable } from '@angular/core';
+
+import { Injectable }      from '@angular/core';
 import { tokenNotExpired } from 'angular2-jwt';
-import { Router } from '@angular/router';
 
 // Avoid name not found warnings
-declare var auth0: any;
+declare var Auth0Lock: any;
 
 @Injectable()
 export class Auth {
-
   // Configure Auth0
-  auth0 = new auth0.WebAuth({
-    domain: 'pawell67.auth0.com',
-    clientID: 'A3D0JChm9dALVDEpw3FbaiwEKSocKC1h',
-    // specify your desired callback URL
-    redirectUri: 'http://localhost:4200',
-    responseType: 'token id_token'
-  });
+  lock = new Auth0Lock('O6FjuhA8WYFEjVtIzmUBkT17kvh45G5X', 'pawell67.auth0.com', {});
 
-  constructor(private router: Router) {
-  }
-
-  public handleAuthentication(): void {
-    this.auth0.parseHash({ _idTokenVerification: false }, (err, authResult) => {
-      if (err) {
-        alert(`Error: ${err.errorDescription}`)
-      }
-      if (authResult && authResult.accessToken && authResult.idToken) {
-        window.location.hash = '';
-        localStorage.setItem('access_token', authResult.accessToken);
-        localStorage.setItem('id_token', authResult.idToken);
-        this.router.navigate(['/home']);
-      }
+  constructor() {
+    // Add callback for lock `authenticated` event
+    this.lock.on("authenticated", (authResult) => {
+      localStorage.setItem('id_token', authResult.idToken);
     });
   }
 
-  public login(username: string, password: string): void {
-    this.auth0.redirect.loginWithCredentials({
-      connection: 'Username-Password-Authentication',
-      username,
-      password
-    }, err => {
-      if (err) return alert(err.description);
-    });
+  public login() {
+    // Call the show method to display the widget.
+    this.lock.show();
   }
 
-  public signup(email, password): void {
-    this.auth0.redirect.signupAndLogin({
-      connection: 'Username-Password-Authentication',
-      email,
-      password,
-    }, err => {
-      if (err) return alert(err.description);
-    });
-  }
-
-  public loginWithGoogle(): void {
-    this.auth0.authorize({
-      connection: 'google-oauth2',
-    });
-  }
-
-  public isAuthenticated(): boolean {
-    // Check whether the id_token is expired or not
+  public authenticated() {
+    // Check if there's an unexpired JWT
+    // This searches for an item in localStorage with key == 'id_token'
     return tokenNotExpired('id_token');
   }
 
-  public logout(): void {
+  public logout() {
     // Remove token from localStorage
-    localStorage.removeItem('access_token');
     localStorage.removeItem('id_token');
-  }
-
-  private setUser(authResult): void {
-    localStorage.setItem('access_token', authResult.accessToken);
-    localStorage.setItem('id_token', authResult.idToken);
   }
 }
