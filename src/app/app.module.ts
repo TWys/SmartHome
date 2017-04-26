@@ -36,7 +36,7 @@ import { GalleryComponent } from './gallery/gallery.component';
     appRoutingProviders,
     AUTH_PROVIDERS
   ],
-  bootstrap: [AppComponent, ContactComponent, HomeComponent]
+  bootstrap: [AppComponent,  ContactComponent, HomeComponent]
 })
 export class AppModule { }
 
