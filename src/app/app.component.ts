@@ -5,7 +5,7 @@ import { Auth } from './auth.service';
   selector: 'app-root',
   providers: [ Auth ],
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css', '../assets/bootstrap/css/bootstrap.css']
+  styleUrls: ['./app.component.css','../assets/bootstrap/css/bootstrap.css']
 })
 export class AppComponent {
   constructor(private auth: Auth) {};
