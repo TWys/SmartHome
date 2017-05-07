@@ -9,9 +9,7 @@ import { Auth } from './auth.service';
 })
 export class AppComponent {
   constructor(private auth: Auth) {};
-  slogan = "be smart like your home!";
-  checkOffer = "Sprawdź naszą ofertę!";
-}
+ }
 
 this.onload = setCookie();
 
@@ -39,6 +37,7 @@ function setCookie() {
       container.removeChild(close);
       document.body.removeChild(document.getElementById('cookieinfo'));
     });
+
     return null;
   }
 

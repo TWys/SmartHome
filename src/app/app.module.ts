@@ -11,9 +11,9 @@ import { FunctionsComponent } from './functions/functions.component';
 import { AboutComponent } from './about/about.component';
 import { ServicesComponent } from './services/services.component';
 import { LoginComponent } from './login/login.component';
-import { routing,
-  appRoutingProviders } from './app.routes';
+import { routing, appRoutingProviders } from './app.routes';
 import { GalleryComponent } from './gallery/gallery.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +24,8 @@ import { GalleryComponent } from './gallery/gallery.component';
     AboutComponent,
     ServicesComponent,
     LoginComponent,
-    GalleryComponent
+    GalleryComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +37,7 @@ import { GalleryComponent } from './gallery/gallery.component';
     appRoutingProviders,
     AUTH_PROVIDERS
   ],
-  bootstrap: [AppComponent,  ContactComponent, HomeComponent]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
 
