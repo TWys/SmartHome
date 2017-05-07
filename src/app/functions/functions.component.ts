@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Auth} from "../auth.service";
 
 @Component({
   selector: 'app-functions',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./functions.component.css','../../assets/bootstrap/css/bootstrap.css']
 })
 export class FunctionsComponent implements OnInit {
+  constructor(private auth: Auth) {}
 
   title= 'Smart Home';
 
