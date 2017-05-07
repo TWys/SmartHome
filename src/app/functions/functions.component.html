@@ -1,4 +1,5 @@
 <section id="functions" class="functions">
+  <div *ngIf="auth.authenticated()">
   <div class="container">
 
     <div class="row status_bar">
@@ -42,5 +43,10 @@
     </div>
     <div style="clear:both;"></div>
     <br/>
+  </div>
+  </div>
+  <div *ngIf="!auth.authenticated()">
+    <h1>Sorry, you have to log in!</h1>
+
   </div>
 </section>

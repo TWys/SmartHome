@@ -31,13 +31,13 @@
               <li><a href="#"><img src="../../assets/img/svg/ukraine.svg" alt="ukrainian language"/>Ukraiński</a></li>
             </ul>
           <li>
+            <a routerLink="functions" *ngIf="auth.authenticated()">Funkcje</a>
+          </li>
+          <li>
             <div class="login-button">
               <a (click)="auth.login()" *ngIf="!auth.authenticated()">Zaloguj</a>
               <a (click)="auth.logout()" *ngIf="auth.authenticated()">Wyloguj</a>
             </div>
-          </li>
-          <li>
-            <a routerLink="functions" *ngIf="auth.authenticated()">Funkcje</a>
           </li>
         </ul>
       </div>
