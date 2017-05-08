@@ -15,6 +15,9 @@ import { routing, appRoutingProviders } from './app.routes';
 import { GalleryComponent } from './gallery/gallery.component';
 import { NavbarComponent } from './navbar/navbar.component';
 
+import { TRANSLATION_PROVIDERS, TranslatePipe, TranslateService }   from './translate';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +28,8 @@ import { NavbarComponent } from './navbar/navbar.component';
     ServicesComponent,
     LoginComponent,
     GalleryComponent,
-    NavbarComponent
+    NavbarComponent,
+    TranslatePipe
   ],
   imports: [
     BrowserModule,
@@ -35,7 +39,9 @@ import { NavbarComponent } from './navbar/navbar.component';
   ],
   providers: [
     appRoutingProviders,
-    AUTH_PROVIDERS
+    AUTH_PROVIDERS,
+    TranslateService,
+    TRANSLATION_PROVIDERS
   ],
   bootstrap: [AppComponent]
 })

@@ -1,6 +1,9 @@
 @media (min-width: 768px) and (max-width: 992px) {
-.logo{
-  display: none;
+  .logo {
+    display: none;
   }
-  ul.nav.navbar-nav.navbar-right{width:800px;}
+
+  ul.nav.navbar-nav.navbar-right {
+    width: 800px;
+  }
 }
