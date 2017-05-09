@@ -11,9 +11,12 @@ import { FunctionsComponent } from './functions/functions.component';
 import { AboutComponent } from './about/about.component';
 import { ServicesComponent } from './services/services.component';
 import { LoginComponent } from './login/login.component';
-import { routing,
-  appRoutingProviders } from './app.routes';
+import { routing, appRoutingProviders } from './app.routes';
 import { GalleryComponent } from './gallery/gallery.component';
+import { NavbarComponent } from './navbar/navbar.component';
+
+import { TRANSLATION_PROVIDERS, TranslatePipe, TranslateService }   from './translate';
+
 
 @NgModule({
   declarations: [
@@ -24,7 +27,9 @@ import { GalleryComponent } from './gallery/gallery.component';
     AboutComponent,
     ServicesComponent,
     LoginComponent,
-    GalleryComponent
+    GalleryComponent,
+    NavbarComponent,
+    TranslatePipe
   ],
   imports: [
     BrowserModule,
@@ -34,9 +39,12 @@ import { GalleryComponent } from './gallery/gallery.component';
   ],
   providers: [
     appRoutingProviders,
-    AUTH_PROVIDERS
+    AUTH_PROVIDERS,
+    TranslateService,
+    TRANSLATION_PROVIDERS
   ],
-  bootstrap: [AppComponent,  ContactComponent, HomeComponent]
+  bootstrap: [AppComponent]
 })
+
 export class AppModule { }
 
