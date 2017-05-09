@@ -3,11 +3,11 @@
   <div class="container">
 
     <div class="row status_bar">
-      <div class="status">Witaj <span class="user_name">Jan</span>!</div>
+      <div class="status">Witaj <span class="user_name" (click)="fprofil(1)">{{auth.userProfile.name}}</span>!</div>
       <img src="../../assets/img/svg/en.svg" alt="english language" class="flag"/>
       <img src="../../assets/img/svg/pl.svg" alt="polish language" class="flag"/>
-      <img src="../../assets/img/svg/de.svg" alt="german language" class="flag"/>
-      <img src="../../assets/img/svg/ua.svg" alt="ukrainian language" class="flag"/>
+      <!--<img src="../../assets/img/svg/de.svg" alt="german language" class="flag"/>-->
+      <!--<img src="../../assets/img/svg/ua.svg" alt="ukrainian language" class="flag"/>-->
     </div>
     <div class="row rect">
       <div class="col-xs-12 col-sm-7 logo">{{title}}</div>
@@ -43,10 +43,65 @@
     </div>
     <div style="clear:both;"></div>
     <br/>
+    <div id="profile_container">
+      <div class="row profile">
+        <div class="col-xs-12">
+          <h2>Profile info</h2>
+          <button (click)="fprofil(0)">X</button>
+          <br /><br />
+          <div class="col-xs-12 col-sm-4 profile_photo">
+            <img src={{auth.userProfile.picture}} alt="Zdjęcie profilowe" class="profile-img">
+            <br /><br />
+          </div>
+          <div class="col-xs-12 col-sm-8 profile_info">
+            <form>
+              <div class="form-group row" *ngIf="auth.userProfile.name">
+                <label class="col-xs-6 col-sm-5">Profile name: </label>
+                <div class="col-xs-6 col-sm-7">{{auth.userProfile.name}}</div>
+              </div>
+              <div class="form-group row" *ngIf="auth.userProfile.screen_name">
+                <label class="col-xs-6 col-sm-5">Screen name:</label>
+                <div class="col-xs-6 col-sm-7">{{auth.userProfile.screen_name}}</div>
+              </div>
+              <div class="form-group row" *ngIf="auth.userProfile.given_name">
+                <label class="col-xs-6 col-sm-5">First name:</label>
+                <div class="col-xs-6 col-sm-7">{{auth.userProfile.given_name}}</div>
+              </div>
+              <div class="form-group row" *ngIf="auth.userProfile.family_name">
+                <label class="col-xs-6 col-sm-5">Last name:</label>
+                <div class="col-xs-6 col-sm-7">{{auth.userProfile.family_name}}</div>
+              </div>
+              <div class="form-group row" *ngIf="auth.userProfile.gender">
+                <label class="col-xs-6 col-sm-5">Gender:</label>
+                <div class="col-xs-6 col-sm-7">{{auth.userProfile.gender}}</div>
+              </div>
+              <div class="form-group row" *ngIf="auth.userProfile.gdy">
+                <label class="col-xs-6 col-sm-5">Gender:</label>
+                <div class="col-xs-6 col-sm-7">{{auth.userProfile.gdy}}</div>
+              </div>
+              <div class="form-group row" *ngIf="auth.userProfile.age">
+                <label class="col-xs-6 col-sm-5">Age:</label>
+                <div class="col-xs-6 col-sm-7">{{auth.userProfile.age}}</div>
+              </div>
+              <div class="form-group row" *ngIf="auth.userProfile.email">
+                <label class="col-xs-6 col-sm-5">E-mail:</label>
+                <div class="col-xs-6 col-sm-7">{{auth.userProfile.email}}</div>
+              </div>
+              <div class="form-group row" *ngIf="auth.userProfile.nickname">
+                <label class="col-xs-6 col-sm-5">Nickname:</label>
+                <div class="col-xs-6 col-sm-7">{{auth.userProfile.nickname}}</div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
   </div>
   <div *ngIf="!auth.authenticated()">
     <h1>Sorry, you have to log in!</h1>
 
   </div>
+
 </section>

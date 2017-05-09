@@ -18,7 +18,7 @@ export class Auth {
     // Set userProfile attribute of already saved profile
     this.userProfile = JSON.parse(localStorage.getItem('profile'));
 
-    // Add callback for the Lock `authenticated` event
+    // Add callback for lock `authenticated` event
     this.lock.on("authenticated", (authResult) => {
       localStorage.setItem('id_token', authResult.idToken);
 
@@ -46,8 +46,6 @@ export class Auth {
     // This searches for an item in localStorage with key == 'id_token'
     return tokenNotExpired('id_token');
   }
-
-
 
   public logout() {
     // Remove token from localStorage
