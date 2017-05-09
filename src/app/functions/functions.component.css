@@ -1,5 +1,9 @@
 @import '../../assets/font-awesome/css/font-awesome.css';
 
+section.functions{
+  margin-top: 50px;
+}
+
 html
 {
   width: 98%;
