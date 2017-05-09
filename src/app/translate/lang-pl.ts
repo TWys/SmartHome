@@ -5,7 +5,7 @@ export const LANG_PL_TRANS = {
   'O nas': 'O nas',
   'Galeria': 'Galeria',
   'Oferta': 'Oferta',
-  'Kontakt': 'Contact',
+  'Kontakt': 'Kontakt',
   'Język': 'Język',
   'Funkcje': 'Funkcje',
   'Zaloguj': 'Zaloguj',

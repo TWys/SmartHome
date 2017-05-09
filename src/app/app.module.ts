@@ -45,5 +45,6 @@ import { TRANSLATION_PROVIDERS, TranslatePipe, TranslateService }   from './tran
   ],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }
 
