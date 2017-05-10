@@ -36,9 +36,16 @@ export class FunctionsComponent implements OnInit {
   //
   // }
 
+  fprofil(x) {
+  if (x==1) document.getElementById('profile_container').style.display = 'block';
+  else if (x==0) document.getElementById('profile_container').style.display = 'none';
+}
+
   public ngOnInit(): any
   {
     // this.clock();
   }
   constructor(private auth: Auth) {};
 }
+
+
