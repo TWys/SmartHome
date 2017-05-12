@@ -1,29 +1,92 @@
 <?php
+if(!$_POST) exit;
+if (!defined("PHP_EOL")) define("PHP_EOL", "\r\n");
 
-  // Przypisanie zmiennych POST
-  $name = $_POST['name'];
-  $email = $_POST['email'];
-  $title = $_POST['title'];
-  $message = $_POST['message'];
+// Dane otrzymane z formularza przypisujemy do zmiennych.
+$name     = $_POST['name'];
+$email    = $_POST['email'];
+$subject  = $_POST['subject'];
+$comments = $_POST['comments'];
+$verify   = $_POST['verify'];
 
-  $od_kogo = "mail@smarthome.pl";
-  $do_kogo = "mail@smarthome.pl";
+// Walidacja poprawnoœci danych.
+if(trim($name) == '') {
+	echo '<div class="error_message">Prosimy o podanie imienia i nazwiska.</div>';
+	exit();
+} 
 
-  // ZÅ‚oÅ¼enie wiadomoÅ›ci
-  $wiadomosc = "";
-  $wiadomosc .= "Imie i nazwisko: " . $name . "\n";
-  $wiadomosc .= "Email: " . $email . "\n";
-  $wiadomosc .= "TytuÅ‚: " . $title . "\n";
-  $wiadomosc .= "WiadomoÅ›Ä‡: " . $message . "\n";
+else if(trim($email) == '') {
+	echo '<div class="error_message">Prosimy o podanie poprawnego adresu email.</div>';
+	exit();
+} 
 
-  $sukces = mail($do_kogo, $title, $wiadomosc, "Od: <$od_kogo>");
+if(trim($subject) == '') {
+	echo '<div class="error_message">Prosimy o podanie tematu wiadomoœci.</div>';
+	exit();
+} 
 
-  if ($sukces){
-    print "WiadomoÅ›Ä‡ zostaÅ‚a wysÅ‚ana!";
-  }
+else if(trim($comments) == '') {
+	echo '<div class="error_message">Prosimy o wpisanie treœci wiadomoœci.</div>';
+	exit();
+} 
 
-  else{
-    print "BÅ‚Ä…d! Nie wysÅ‚ano wiadomoÅ›ci.";
-  }
+else if(!isset($verify) || trim($verify) == '') {
+	echo '<div class="error_message">Aby wys³aæ wiadomoœæ nale¿y uzupe³niæ wynik dzia³ania.</div>';
+	exit();
+} 
 
-?>
+// W tym miejscu umieszczamy poprawny wynik dzia³ania do weryfikacji.
+else if(trim($verify) != '22') {
+	echo '<div class="error_message">Numer weryfikacyjny jest niepoprawny. Prosimy wpisaæ wynik dzia³ania.</div>';
+	exit();
+}
+
+if(get_magic_quotes_gpc()) {
+	$comments = stripslashes($comments);
+}
+
+$msg = "<strong>Autor:</strong> $name <br /> <strong>Temat:</strong> $subject <br /> <strong>Kontakt:</strong> $email <br /><br />
+        Wiadomoœæ ze strony Smarthome:<br /> <br />
+        \"$comments\"<br /><br />";
+ 
+
+require 'phpmailer/PHPMailerAutoload.php'; /* podajemy odpowiednia sciezke w stosunku do aktualnego pliku php */
+
+$mail = new PHPMailer;
+
+/* KONFIGURACJA PHPMailer */
+$mail->isSMTP(); 				/* Wysy³anie za pomoc¹ SMTP */
+$mail->Host = 'smtp.gmail.com'; 		/* Adres serwera poczty */
+$mail->SMTPAuth = true; 			/* Uruchomienie autoryzacji SMTP */
+$mail->Username = 'smarthomepg2017@gmail.com'; 	/* Login do poczty */
+$mail->Password = 'Projekt2017';		/* Haslo do poczty */
+$mail->SMTPSecure = 'tls';			/* W³¹czamy szyfrowanie tls, mo¿na ustawiæ równie¿ ssl - mo¿liwoœci poczty powinny byæ dostêpne w dokumentacji dostawcy */
+$mail->Port = 587;				/* Port po którym skrypt ma siê ³¹czyæ z kontem, przy tls jest to zazwyczaj 587, przy ssl 465 - mo¿e to siê jednak ró¿niæ w zale¿noœci od dostawcy poczty */
+$mail->CharSet = "UTF-8";                       /* Ustawienie kodowania wiadomoœci na UTF-8 */
+
+/* KONFIGURACJA KONKRETNEGO ADRESU */
+$mail->From = 'smarthomepg2017@gmail.com';                      /* Adres nadawcy maila*/
+$mail->FromName = 'Smarthome';                                  /* Nazwa nadawcy */
+
+$mail->addAddress('smarthomepg2017@gmail.com', 'SmartHome');	/* Dodajemy odbiorcê wiadomoœci (mo¿na dodaæ kilku) */
+
+$mail->addReplyTo($email, $name);                               /* Je¿eli chcemy aby odpowiedzi na wys³any mail trafia³y na inny adres ni¿ ten z którego zosta³y wys³ane */
+
+$mail->isHTML(true);                                            /* Wys³anie w formacie HTML */
+
+$mail->Subject = $name . ' kontaktuje siê poprzez formularz SmartHome.';
+$mail->Body    = $msg;
+
+if(!$mail->send()) {				
+    echo 'Wyst¹pi³ b³¹d w trakcie wysy³ania wiadomoœci. Prosimy zapoznaæ siê z jego treœci¹: <br /> ' . $mail->ErrorInfo;      	
+} 
+
+else {					
+	echo "<fieldset>";
+	echo "<div id='success_page'>";
+	echo "<h1>Dziêkujemy za wys³anie wiadomoœci.</h1>";
+	echo "</div>";
+	echo "</fieldset>";
+}
+ 
+ 

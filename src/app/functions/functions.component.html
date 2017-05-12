@@ -1,54 +1,52 @@
-<link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Lato&amp;subset=latin-ext" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+<section id="functions" class="functions">
+  <div *ngIf="auth.authenticated()">
+  <div class="container">
 
-<div class="container">
+    <div class="row status_bar">
+      <div class="status">Witaj <span class="user_name">Jan</span>!</div>
+      <img src="../../assets/img/svg/en.svg" alt="english language" class="flag"/>
+      <img src="../../assets/img/svg/pl.svg" alt="polish language" class="flag"/>
+      <img src="../../assets/img/svg/de.svg" alt="german language" class="flag"/>
+      <img src="../../assets/img/svg/ua.svg" alt="ukrainian language" class="flag"/>
+    </div>
+    <div class="row rect">
+      <div class="col-xs-12 col-sm-7 logo">{{title}}</div>
 
-  <div class="row status_bar">
-    <div class="status">Witaj <span class="user_name">Jan</span>!</div>
-    <img src="../../assets/img/svg/united-kingdom.svg" alt="english language" class="flag" />
-    <img src="../../assets/img/svg/poland.svg" alt="polish language" class="flag" />
-    <img src="../../assets/img/svg/germany.svg" alt="german language" class="flag"/>
-    <img src="../../assets/img/svg/ukraine.svg" alt="ukrainian language" class="flag"/>
-  </div>
-  <div class="row rect">
-    <div class="col-xs-12 col-sm-7 logo">{{title}}</div>
-
-    <div class="hidden-xs col-sm-5 zegar" id='calendar'></div>
-    <div style="clear:both;"></div>
-  </div>
-
-</div>
-<div class="container">
-  <div class="row">
-
-    <div class="hidden-xs col-md-6 col-md-push-6 square">
-      <div class="col-xs-12 tile5" id="tekst">
-        Nazwa panelu (odpowiednia dla klikniętego kafelka)<br/><br/>
-        Tu widziałbym panel do wyświetlania/zarządzania odpowiednimi parametrami, np po kliknięciu kafelka "Temperatura"
-        pokazywałyby się aktualny odczyt oraz elementy do ustawiania temperatury (przyciski pokrętło lub coś takiego)
-      </div>
+      <div class="hidden-xs col-sm-5 zegar" id='calendar'></div>
+      <div style="clear:both;"></div>
     </div>
 
-    <div class="col-xs-12 col-md-6 col-md-pull-6 square">
-      <div class="tiles">
-        <div class="col-xs-12 col-md-5 tile1"><i class="fa fa-thermometer-half" aria-hidden="true"></i><br/>Temperatura
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="hidden-xs col-md-6 col-md-push-6 square">
+        <div class="col-xs-12 tile5" id="tekst">
+          Nazwa panelu (odpowiednia dla klikniętego kafelka)<br/><br/>
+          Tu widziałbym panel do wyświetlania/zarządzania odpowiednimi parametrami, np po kliknięciu kafelka
+          "Temperatura"
+          pokazywałyby się aktualny odczyt oraz elementy do ustawiania temperatury (przyciski pokrętło lub coś takiego)
         </div>
-        <div class="col-xs-12 col-md-5 tile1"><i class="fa fa-lightbulb-o" aria-hidden="true"></i><br/>Oświetlenie</div>
-        <div style="clear:both;"></div>
+      </div>
+      <div class="col-xs-12 col-md-6 col-md-pull-6 square">
+        <div class="tiles">
+          <div class="col-xs-12 col-md-5 tile1"><i class="fa fa-thermometer-half" aria-hidden="true"></i><br/>Temperatura
+          </div>
+          <div class="col-xs-12 col-md-5 tile1"><i class="fa fa-lightbulb-o" aria-hidden="true"></i><br/>Oświetlenie
+          </div>
+          <div style="clear:both;"></div>
 
-        <div class="col-xs-12 col-md-5 tile2"><i class="fa fa-moon-o" aria-hidden="true"></i><br/>Rolety</div>
-        <div class="col-xs-12 col-md-5 tile3"><i class="fa fa-tint" aria-hidden="true"></i><br/>Wilgotność</div>
-        <div style="clear:both;"></div>
-
+          <div class="col-xs-12 col-md-5 tile2"><i class="fa fa-moon-o" aria-hidden="true"></i><br/>Rolety</div>
+          <div class="col-xs-12 col-md-5 tile3"><i class="fa fa-tint" aria-hidden="true"></i><br/>Wilgotność</div>
+          <div style="clear:both;"></div>
+        </div>
       </div>
     </div>
+    <div style="clear:both;"></div>
+    <br/>
   </div>
-
-  <div style="clear:both;"></div>
-  <br/>
-  <div class="row">
-    <div class="col-xs-12 footer">Projekt grupowy AiUI 2017 &copy;</div>
   </div>
-</div>
+  <div *ngIf="!auth.authenticated()">
+    <h1>Sorry, you have to log in!</h1>
 
-
+  </div>
+</section>
