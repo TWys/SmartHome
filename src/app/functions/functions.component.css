@@ -71,6 +71,11 @@ body
   font-weight: bold;
 }
 
+.user_name:hover
+{
+  cursor: pointer;
+}
+
 .flag
 {
   padding: 2px;

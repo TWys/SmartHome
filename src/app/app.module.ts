@@ -16,6 +16,8 @@ import { GalleryComponent } from './gallery/gallery.component';
 import { NavbarComponent } from './navbar/navbar.component';
 
 import { TRANSLATION_PROVIDERS, TranslatePipe, TranslateService }   from './translate';
+import { TemperatureComponent } from './temperature/temperature.component';
+import { LightComponent } from './light/light.component';
 
 
 @NgModule({
@@ -29,7 +31,9 @@ import { TRANSLATION_PROVIDERS, TranslatePipe, TranslateService }   from './tran
     LoginComponent,
     GalleryComponent,
     NavbarComponent,
-    TranslatePipe
+    TranslatePipe,
+    TemperatureComponent,
+    LightComponent
   ],
   imports: [
     BrowserModule,

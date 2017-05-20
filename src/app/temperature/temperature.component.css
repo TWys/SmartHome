@@ -1,0 +1,9 @@
+#temperature_minus {
+  border-bottom-left-radius: 25px;
+  border-top-left-radius: 25px;
+}
+#temperature_plus {
+  border-bottom-right-radius: 25px;
+  border-top-right-radius: 25px;
+}
+

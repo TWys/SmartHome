@@ -1,0 +1,28 @@
+
+<div class="row">
+  <div class="col-md-6">
+    Aktualna temperatura:
+  </div>
+  <div class="col-md-4">
+    Ustaw temperaturę:
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-6">
+    <div class="temperature_box">
+      25
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div clas="row">
+      <div class="temperature_box">
+        {{setTemperature}}
+      </div>
+    </div>
+    <div class="row">
+      <button class="col-md-3 set_temperature" id="temperature_minus" (click)="fSetTemperature(0)">-</button><button class="col-md-3 set_temperature" id="temperature_plus" (click)="fSetTemperature(1)">+</button>
+    </div>
+  </div>
+</div>
+
+
