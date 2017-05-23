@@ -25,11 +25,10 @@ export class TemperatureComponent implements OnInit {
 
   fGetActualTemperature () {
     this.actual_temp=this.datasService.fGetTemperature();
-    if (this.actual_temp%1 == 0) this.actual_temp = this.actual_temp+'.0';
-
     if (this.actual_temp < 18) document.getElementById('actual_temp').style.color="blue";
     else if (this.actual_temp > 26) document.getElementById('actual_temp').style.color="red";
     else document.getElementById('actual_temp').style.color="white";
+    if (this.actual_temp%1 == 0) this.actual_temp = this.actual_temp+'.0';
 
 
     setTimeout(() => {
