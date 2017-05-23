@@ -18,6 +18,9 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { TRANSLATION_PROVIDERS, TranslatePipe, TranslateService }   from './translate';
 import { TemperatureComponent } from './temperature/temperature.component';
 import { LightComponent } from './light/light.component';
+import {MockBackend} from "@angular/http/testing";
+import {BaseRequestOptions, Http} from "@angular/http";
+//import {DatasService} from "./datas.service";
 
 
 @NgModule({
@@ -45,7 +48,15 @@ import { LightComponent } from './light/light.component';
     appRoutingProviders,
     AUTH_PROVIDERS,
     TranslateService,
-    TRANSLATION_PROVIDERS
+    TRANSLATION_PROVIDERS,
+    MockBackend,
+    BaseRequestOptions,
+    {
+      provide: Http,
+      deps: [MockBackend, BaseRequestOptions],
+      useFactory: (backend: MockBackend, options: BaseRequestOptions) => { return new Http(backend, options); }
+    },
+//    DatasService
   ],
   bootstrap: [AppComponent]
 })

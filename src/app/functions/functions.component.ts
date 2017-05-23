@@ -51,17 +51,12 @@ export class FunctionsComponent implements OnInit {
   public wybranaFunkcja;
 
   public wybierzFunkcje = (funkcja) => {
-    console.log(funkcja);
+    // console.log(funkcja);
     if(this.wybranaFunkcja == funkcja) return;
     this.wybranaFunkcja = funkcja;
-    console.log(this.wybranaFunkcja);
+    // console.log(this.wybranaFunkcja);
     return funkcja;
   }
-
-  // public wybierzFunkcje(funkcja) {
-  //   this.wybranaFunkcja = funkcja;
-  //   console.log(this.wybranaFunkcja);
-  // }
 
 }
 
