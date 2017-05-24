@@ -29,4 +29,15 @@ export class DatasService {
     this.temperatures.value = JSON.parse(this.response).temperature[x].actual;
     return this.temperatures.value;
   }
+
+  fGetLightStatus(x) {
+    if (x==0) {
+      document.getElementById('bulb').style.fill = 'black';
+      return 0;
+    }
+    else if (x==1) {
+      document.getElementById('bulb').style.fill = 'yellow';
+      return 1;
+    }
+  }
 }
