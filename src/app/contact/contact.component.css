@@ -5,16 +5,26 @@
 
     #form_contact h1 { margin: 10px 0 10px; font-size: 24px; color: #333333; font-weight: 300; }
 
-    #form_contact { display: block; width: 650px; margin: 50px auto; padding: 35px; background-color: #FFF; -webkit-border-radius:5px;  color: black;}
+    #form_contact {
+      display: block;
+      width: 650px;
+      margin: 50px auto;
+      padding: 35px;
+      background-color: #FFF;
+      -webkit-border-radius:5px;
+      color: black;
+      max-width: 100% !important;
+      height: auto;
+    }
 
     #form_contact label { display: inline-block; float: left; height:36px; line-height: 36px; width: 155px; font-size: 13px;  color: black;}
-    #form_contact input, textarea, select { width: 400px; margin: 0; padding: 10px; color: #666; background: #fff; border: 1px solid #E5E5E5; margin: 5px; box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 8px; -moz-box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 8px; -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 8px;  border-radius: 4px; -moz-border-radius: 4px; -webkit-border-radius: 4px; color: black;}
-    #form_contact input:focus, textarea:focus, select:focus {background-color: #fff; color:#333; color: black;}
+    #form_contact input, textarea, select { max-width: 100% !important; width: 400px; margin: 0; padding: 10px; color: #666; background: #fff; border: 1px solid #E5E5E5; margin: 5px; box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 8px; -moz-box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 8px; -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 8px;  border-radius: 4px; -moz-border-radius: 4px; -webkit-border-radius: 4px; color: black;}
+    #form_contact input:focus, textarea:focus, select:focus {max-width: 100% !important; background-color: #fff; color:#333; color: black;}
     #form_contact input.submit { width: 160px; cursor: pointer; background:#99cd45; color:#fff; }
     #form_contact input.submit:hover { background:#81a842; }
     #form_contact input[type="submit"][disabled] { background:#99cd45; }
     #form_contact fieldset {border-style: none; padding-left: 0px;}
-    #form_contact legend { padding-bottom: 10px; font-weight:bold; color:#000; }
+    #form_contact legend { padding-bottom: 10px; font-weight:bold; color:#000;  text-align: center; font-size: medium;}
     #form_contact span.required{ font-size: 13px; color: #ff0000; }
     #message { margin: 10px 0; padding: 0; }
 
@@ -26,9 +36,29 @@
 
     acronym { border-bottom:1px dotted #ccc; }
 
-    #form_contact comments { font-size: 13px; color: #black; }
+    #form_contact comments { font-size: 13px; color: black; }
 
     #dane h1, p, a {
 
           color: white;
     }
+
+
+  .video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px; height: 0; overflow: hidden;
+  }
+
+  .video-container iframe,
+  .video-container object,
+  .video-container embed {
+    position: absolute;
+    align-content: center;
+    text-align: center;
+    margin: 0 auto;
+    top: 0;
+    left: 25%;
+    width: 50% !important;
+    height: 70% !important;
+  }
