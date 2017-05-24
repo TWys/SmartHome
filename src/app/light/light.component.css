@@ -1,0 +1,24 @@
+.switcher {
+  transform: scale(0.5);
+}
+
+.bulb {
+  transform: scale(0.5);
+}
+
+
+.light {
+  text-align: center;
+  max-height: 10vh;
+  font-size: 25px;
+  /*line-height: 50px;*/
+  /*transform: scale(0.5);*/
+}
+
+#turn_off:hover {
+  cursor: pointer;
+}
+
+#turn_on:hover {
+  cursor: pointer;
+}

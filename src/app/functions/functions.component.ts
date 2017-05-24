@@ -10,6 +10,7 @@ export class FunctionsComponent implements OnInit {
 
   title= 'Smart Home';
 
+
   // public clock() {
   //   let date= new Date();
   //   let hour= date.getHours().toString();
@@ -46,6 +47,17 @@ export class FunctionsComponent implements OnInit {
     // this.clock();
   }
   constructor(private auth: Auth) {};
+
+  public wybranaFunkcja;
+
+  public wybierzFunkcje = (funkcja) => {
+    // console.log(funkcja);
+    if(this.wybranaFunkcja == funkcja) return;
+    this.wybranaFunkcja = funkcja;
+    // console.log(this.wybranaFunkcja);
+    return funkcja;
+  }
+
 }
 
 
