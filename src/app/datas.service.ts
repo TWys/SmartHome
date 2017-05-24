@@ -7,7 +7,7 @@ import {MockBackend, MockConnection} from '@angular/http/testing';
 @Injectable()
 export class DatasService {
 
-  public response = '{"temperature":[{"actual":25,"requested":26},{"actual":24.5,"requested":24},{"actual":18.9,"requested":24},{"actual":17.5,"requested":24},{"actual":28.4,"requested":24},{"actual":30.0,"requested":24},{"actual":21.8,"requested":24},{"actual":16.9,"requested":24},{"actual":27.1,"requested":24},{"actual":16,"requested":24}],"light":[{"status":0},{"status":1}]}';
+  public response = '{"temperature":[{"actual":25,"requested":26},{"actual":24.5,"requested":24},{"actual":18.9,"requested":24},{"actual":17.5,"requested":24},{"actual":28.4,"requested":24},{"actual":30.0,"requested":24},{"actual":21.8,"requested":24},{"actual":16.9,"requested":24},{"actual":27.1,"requested":24},{"actual":16,"requested":24}]}';
 
   // public tempe = {
   //   value: 25.0,
