@@ -1,0 +1,25 @@
+{
+  "navbar":{
+    "about":"O nas",
+    "gallery":"Galeria",
+    "offer":"Oferta",
+    "contact":"Kontakt",
+    "language":"Język",
+    "functions":"Funkcje",
+    "signin":"Zaloguj",
+    "signout":"Wyloguj"
+  },
+  "languages":{
+    "english":"Angielski",
+    "polish":"Polski"
+  },
+  "home":{
+    "slogan":"Bądź mądry jak Twój dom!",
+    "offer":"Sprawdź naszą ofertę!"
+  },
+  "about":{
+    "title":"O nas",
+    "team":"Stanowimy profesjonalny zespół",
+    "students":"Studenci wydziału ETI kierunku Aplikacje i usługi internetowe"
+  }
+}

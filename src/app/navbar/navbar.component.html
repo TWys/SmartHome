@@ -15,44 +15,32 @@
       <div id="navbar" class="navbar-collapse collapse">
         <ul class="nav navbar-nav navbar-right">
           <li class="active"><a href="#home">Home</a></li>
-          <li><a href="#about">{{ 'O nas' | translate }}</a></li>
-          <li><a routerLink="gallery">{{ 'Galeria' | translate }}</a></li>
-          <li><a href="#offer">{{ 'Oferta' | translate }}</a></li>
-          <li><a href="#contact">{{ 'Kontakt' | translate }}</a></li>
+          <li><a href="#about">{{ 'navbar.about' | translate }}</a></li>
+          <li><a routerLink="gallery">{{  'navbar.gallery' | translate }}</a></li>
+          <li><a href="#offer">{{  'navbar.offer' | translate   }}</a></li>
+          <li><a href="#contact">{{  'navbar.contact' | translate  }}</a></li>
           <li class="dropdown">
             <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-               aria-expanded="false">{{ 'Język' | translate }}<span class="caret"></span></a>
+               aria-expanded="false">{{  'navbar.language' | translate }}<span class="caret"></span></a>
             <ul class="dropdown-menu">
-              <li *ngFor="let lang of supportedLanguages"
-                (click)="selectLang(lang.value)"
-                  [class]="isCurrentLang(lang.value)"><img src="{{'../../assets/img/svg/'+lang.value+'.svg'}}" />
-                   {{ lang.display }}
+              <li>
+                <a (click)="changeLanguage('pl')"><img src="{{'../../assets/img/svg/pl.svg'}}" />{{ 'languages.polish' | translate }}</a>
+              </li>
+              <li>
+                <a (click)="changeLanguage('en')"><img src="{{'../../assets/img/svg/en.svg'}}" />{{ 'languages.english' | translate }}</a>
               </li>
               </ul>
           <li>
-            <a routerLink="functions" *ngIf="auth.authenticated()">{{ 'Funkcje' | translate }}</a>
+            <a routerLink="functions" *ngIf="auth.authenticated()">{{  'navbar.functions' | translate   }}</a>
           </li>
           <li>
             <div class="login-button">
-              <a (click)="auth.login()" *ngIf="!auth.authenticated()">{{ 'Zaloguj' | translate }}</a>
-              <a (click)="auth.logout()" *ngIf="auth.authenticated()">{{ 'Wyloguj' | translate }}</a>
+              <a (click)="auth.login()" *ngIf="!auth.authenticated()">{{  'navbar.signin' | translate }}</a>
+              <a (click)="auth.logout()" *ngIf="auth.authenticated()">{{  'navbar.signout' | translate   }}</a>
             </div>
           </li>
         </ul>
       </div>
     </div>
   </nav>
-<!--<ul>-->
-  <!--<li *ngFor="let lang of supportedLanguages"-->
-      <!--(click)="selectLang(lang.value)"-->
-      <!--class="" [class.btn-primary]="isCurrentLang(lang.value)"><img src="{{'../../assets/img/svg/'+lang.value+'.svg'}}" />-->
-    <!--{{ lang.display }}-->
-  <!--</li>-->
-<!--</ul>-->
 
-
-  <!--<li><a href="#"><img src="../../assets/img/svg/en.svg" alt="english language"/>Angielski</a>-->
-  <!--</li>-->
-  <!--<li class="active"><a href="#"><img src="../../assets/img/svg/pl.svg" alt="polish language"/>Polski</a></li>-->
-  <!--<li><a href="#"><img src="../../assets/img/svg/de.svg" alt="german language"/>Niemiecki</a></li>-->
-  <!--<li><a href="#"><img src="../../assets/img/svg/ua.svg" alt="ukrainian language"/>Ukraiński</a></li>-->

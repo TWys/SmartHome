@@ -1,21 +1,28 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
-import { AUTH_PROVIDERS } from 'angular2-jwt';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
+import {FormsModule} from '@angular/forms';
+import {HttpModule, Http} from '@angular/http';
+import {AUTH_PROVIDERS} from 'angular2-jwt';
+import {
+  TranslateService,
+  TranslateModule,
+  MissingTranslationHandler,
+  TranslateLoader,
+  TranslateStaticLoader
+} from 'ng2-translate';
 
-import { AppComponent } from './app.component';
-import { ContactComponent } from './contact/contact.component';
-import { HomeComponent } from './home/home.component';
-import { FunctionsComponent } from './functions/functions.component';
-import { AboutComponent } from './about/about.component';
-import { ServicesComponent } from './services/services.component';
-import { LoginComponent } from './login/login.component';
-import { routing, appRoutingProviders } from './app.routes';
-import { GalleryComponent } from './gallery/gallery.component';
-import { NavbarComponent } from './navbar/navbar.component';
-
-import { TRANSLATION_PROVIDERS, TranslatePipe, TranslateService }   from './translate';
+import {AppComponent} from './app.component';
+import {ContactComponent} from './contact/contact.component';
+import {HomeComponent} from './home/home.component';
+import {FunctionsComponent} from './functions/functions.component';
+import {AboutComponent} from './about/about.component';
+import {ServicesComponent} from './services/services.component';
+import {LoginComponent} from './login/login.component';
+import {routing, appRoutingProviders} from './app.routes';
+import {GalleryComponent} from './gallery/gallery.component';
+import {NavbarComponent} from './navbar/navbar.component';
+import {MyMissingTranslationHandler} from './missingtemplate.component';
+import { FooterComponent } from './footer/footer.component'
 
 
 @NgModule({
@@ -29,22 +36,29 @@ import { TRANSLATION_PROVIDERS, TranslatePipe, TranslateService }   from './tran
     LoginComponent,
     GalleryComponent,
     NavbarComponent,
-    TranslatePipe
+    FooterComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    routing
+    routing,
+    TranslateModule.forRoot({
+      provide: TranslateLoader,
+      useFactory: (http: Http) => new TranslateStaticLoader(http, '/assets/i18n', '.json'),
+      deps: [Http]
+    })
   ],
   providers: [
     appRoutingProviders,
     AUTH_PROVIDERS,
     TranslateService,
-    TRANSLATION_PROVIDERS
+    // { provide: TranslateLoader, useFactory: (http: Http) => new TranslateStaticLoader(http, 'assets/i18n', '.json'), deps: [Http] },
+    {provide: MissingTranslationHandler, useClass: MyMissingTranslationHandler},
   ],
   bootstrap: [AppComponent]
 })
 
-export class AppModule { }
+export class AppModule {
+}
 
