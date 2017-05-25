@@ -1,7 +1,7 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 import {FormsModule} from '@angular/forms';
-import {HttpModule, Http} from '@angular/http';
+import {HttpModule, Http, BaseRequestOptions} from '@angular/http';
 import {AUTH_PROVIDERS} from 'angular2-jwt';
 import {
   TranslateService,
@@ -22,7 +22,11 @@ import {routing, appRoutingProviders} from './app.routes';
 import {GalleryComponent} from './gallery/gallery.component';
 import {NavbarComponent} from './navbar/navbar.component';
 import {MyMissingTranslationHandler} from './missingtemplate.component';
-import { FooterComponent } from './footer/footer.component'
+import {FooterComponent} from './footer/footer.component'
+
+import {TemperatureComponent} from './temperature/temperature.component';
+import {LightComponent} from './light/light.component';
+import {MockBackend} from "@angular/http/testing";
 
 
 @NgModule({
@@ -36,7 +40,9 @@ import { FooterComponent } from './footer/footer.component'
     LoginComponent,
     GalleryComponent,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    TemperatureComponent,
+    LightComponent
   ],
   imports: [
     BrowserModule,
@@ -55,8 +61,18 @@ import { FooterComponent } from './footer/footer.component'
     TranslateService,
     // { provide: TranslateLoader, useFactory: (http: Http) => new TranslateStaticLoader(http, 'assets/i18n', '.json'), deps: [Http] },
     {provide: MissingTranslationHandler, useClass: MyMissingTranslationHandler},
+    MockBackend,
+    BaseRequestOptions,
+    // {
+    //   provide: Http,
+    //   deps: [MockBackend, BaseRequestOptions],
+    //   useFactory: (backend: MockBackend, options: BaseRequestOptions) => {
+    //     return new Http(backend, options);
+    //   }
+    // },
   ],
   bootstrap: [AppComponent]
+
 })
 
 export class AppModule {

@@ -71,6 +71,11 @@ body
   font-weight: bold;
 }
 
+.user_name:hover
+{
+  cursor: pointer;
+}
+
 .flag
 {
   padding: 2px;
@@ -160,7 +165,7 @@ body
 {
   margin:10px;
   /*width:420px;*/
-  /*height:244px;*/
+  /*max-height:300px;*/
   background-color: #666666;
   text-align:justify;
   padding: 30px;

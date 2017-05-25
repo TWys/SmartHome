@@ -1,103 +1,103 @@
 <section id="functions" class="functions">
   <div *ngIf="auth.authenticated()">
-  <div class="container">
+    <div class="container">
 
-    <div class="row status_bar">
-      <div class="status">Witaj <span class="user_name" (click)="fprofil(1)">{{auth.userProfile.name}}</span>!</div>
-      <img src="../../assets/img/svg/en.svg" alt="english language" class="flag"/>
-      <img src="../../assets/img/svg/pl.svg" alt="polish language" class="flag"/>
-      <!--<img src="../../assets/img/svg/de.svg" alt="german language" class="flag"/>-->
-      <!--<img src="../../assets/img/svg/ua.svg" alt="ukrainian language" class="flag"/>-->
+      <div class="row status_bar">
+        <div class="status">Witaj <span class="user_name" (click)="fprofil(1)">{{auth.userProfile.name}}</span>!</div>
+        <img src="../../assets/img/svg/en.svg" alt="english language" class="flag"/>
+        <img src="../../assets/img/svg/pl.svg" alt="polish language" class="flag"/>
+        <!--<img src="../../assets/img/svg/de.svg" alt="german language" class="flag"/>-->
+        <!--<img src="../../assets/img/svg/ua.svg" alt="ukrainian language" class="flag"/>-->
+      </div>
+      <div class="row rect">
+        <div class="col-xs-12 col-sm-7 logo">{{title}}</div>
+
+        <div class="hidden-xs col-sm-5 zegar" id='calendar'></div>
+        <div style="clear:both;"></div>
+      </div>
+
     </div>
-    <div class="row rect">
-      <div class="col-xs-12 col-sm-7 logo">{{title}}</div>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-md-6 col-md-push-6 square">
+          <div class="col-xs-12 tile5" id="tekst" *ngIf="wybranaFunkcja=='temperatura'">
+            <app-temperature> </app-temperature>
+          </div>
+          <div class="col-xs-12 tile5" id="tekst" *ngIf="wybranaFunkcja=='oswietlenie'">
+            <app-light> </app-light>
+          </div>
+        </div>
+        <div class="col-xs-12 col-md-6 col-md-pull-6 square">
+          <div class="tiles">
+            <div class="col-xs-12 col-md-5 tile1" (click)="wybierzFunkcje('temperatura')"><i class="fa fa-thermometer-half" aria-hidden="true"></i><br/>Temperatura
+            </div>
+            <div class="col-xs-12 col-md-5 tile1" (click)="wybierzFunkcje('oswietlenie')"><i class="fa fa-lightbulb-o" aria-hidden="true"></i><br/>Oświetlenie
+            </div>
+            <div style="clear:both;"></div>
 
-      <div class="hidden-xs col-sm-5 zegar" id='calendar'></div>
+            <div class="col-xs-12 col-md-5 tile2" (click)="wybierzFunkcje('rolety')"><i class="fa fa-moon-o" aria-hidden="true"></i><br/>Rolety</div>
+            <div class="col-xs-12 col-md-5 tile3"(click)="wybierzFunkcje('wilgotnosc')"><i class="fa fa-tint" aria-hidden="true"></i><br/>Wilgotność</div>
+            <div style="clear:both;"></div>
+          </div>
+        </div>
+      </div>
       <div style="clear:both;"></div>
-    </div>
-
-  </div>
-  <div class="container">
-    <div class="row">
-      <div class="hidden-xs col-md-6 col-md-push-6 square">
-        <div class="col-xs-12 tile5" id="tekst">
-          Nazwa panelu (odpowiednia dla klikniętego kafelka)<br/><br/>
-          Tu widziałbym panel do wyświetlania/zarządzania odpowiednimi parametrami, np po kliknięciu kafelka
-          "Temperatura"
-          pokazywałyby się aktualny odczyt oraz elementy do ustawiania temperatury (przyciski pokrętło lub coś takiego)
-        </div>
-      </div>
-      <div class="col-xs-12 col-md-6 col-md-pull-6 square">
-        <div class="tiles">
-          <div class="col-xs-12 col-md-5 tile1"><i class="fa fa-thermometer-half" aria-hidden="true"></i><br/>Temperatura
-          </div>
-          <div class="col-xs-12 col-md-5 tile1"><i class="fa fa-lightbulb-o" aria-hidden="true"></i><br/>Oświetlenie
-          </div>
-          <div style="clear:both;"></div>
-
-          <div class="col-xs-12 col-md-5 tile2"><i class="fa fa-moon-o" aria-hidden="true"></i><br/>Rolety</div>
-          <div class="col-xs-12 col-md-5 tile3"><i class="fa fa-tint" aria-hidden="true"></i><br/>Wilgotność</div>
-          <div style="clear:both;"></div>
-        </div>
-      </div>
-    </div>
-    <div style="clear:both;"></div>
-    <br/>
-    <div id="profile_container">
-      <div class="row profile">
-        <div class="col-xs-12">
-          <h2>Profile info</h2>
-          <button (click)="fprofil(0)">X</button>
-          <br /><br />
-          <div class="col-xs-12 col-sm-4 profile_photo">
-            <img src={{auth.userProfile.picture}} alt="Zdjęcie profilowe" class="profile-img">
+      <br/>
+      <div id="profile_container">
+        <div class="row profile">
+          <div class="col-xs-12">
+            <h2>Profile info</h2>
+            <button (click)="fprofil(0)">X</button>
             <br /><br />
-          </div>
-          <div class="col-xs-12 col-sm-8 profile_info">
-            <form>
-              <div class="form-group row" *ngIf="auth.userProfile.name">
-                <label class="col-xs-6 col-sm-5">Profile name: </label>
-                <p class="col-xs-6 col-sm-7">{{auth.userProfile.name}}</p>
-              </div>
-              <div class="form-group row" *ngIf="auth.userProfile.screen_name">
-                <label class="col-xs-6 col-sm-5">Screen name:</label>
-                <p class="col-xs-6 col-sm-7">{{auth.userProfile.screen_name}}</p>
-              </div>
-              <div class="form-group row" *ngIf="auth.userProfile.given_name">
-                <label class="col-xs-6 col-sm-5">First name:</label>
-                <p class="col-xs-6 col-sm-7">{{auth.userProfile.given_name}}</p>
-              </div>
-              <div class="form-group row" *ngIf="auth.userProfile.family_name">
-                <label class="col-xs-6 col-sm-5">Last name:</label>
-                <p class="col-xs-6 col-sm-7">{{auth.userProfile.family_name}}</p>
-              </div>
-              <div class="form-group row" *ngIf="auth.userProfile.gender">
-                <label class="col-xs-6 col-sm-5">Gender:</label>
-                <p class="col-xs-6 col-sm-7">{{auth.userProfile.gender}}</p>
-              </div>
-              <div class="form-group row" *ngIf="auth.userProfile.gdy">
-                <label class="col-xs-6 col-sm-5">Gender:</label>
-                <p class="col-xs-6 col-sm-7">{{auth.userProfile.gdy}}</p>
-              </div>
-              <div class="form-group row" *ngIf="auth.userProfile.age">
-                <label class="col-xs-6 col-sm-5">Age:</label>
-                <p class="col-xs-6 col-sm-7">{{auth.userProfile.age}}</p>
-              </div>
-              <div class="form-group row" *ngIf="auth.userProfile.email">
-                <label class="col-xs-6 col-sm-5">E-mail:</label>
-                <p class="col-xs-6 col-sm-7">{{auth.userProfile.email}}</p>
-              </div>
-              <div class="form-group row" *ngIf="auth.userProfile.nickname">
-                <label class="col-xs-6 col-sm-5">Nickname:</label>
-                <p class="col-xs-6 col-sm-7">{{auth.userProfile.nickname}}</p>
-              </div>
-            </form>
+            <div class="col-xs-12 col-sm-4 profile_photo">
+              <img src={{auth.userProfile.picture}} alt="Zdjęcie profilowe" class="profile-img">
+              <br /><br />
+            </div>
+            <div class="col-xs-12 col-sm-8 profile_info">
+              <form>
+                <div class="form-group row" *ngIf="auth.userProfile.name">
+                  <label class="col-xs-6 col-sm-5">Profile name: </label>
+                  <p class="col-xs-6 col-sm-7">{{auth.userProfile.name}}</p>
+                </div>
+                <div class="form-group row" *ngIf="auth.userProfile.screen_name">
+                  <label class="col-xs-6 col-sm-5">Screen name:</label>
+                  <p class="col-xs-6 col-sm-7">{{auth.userProfile.screen_name}}</p>
+                </div>
+                <div class="form-group row" *ngIf="auth.userProfile.given_name">
+                  <label class="col-xs-6 col-sm-5">First name:</label>
+                  <p class="col-xs-6 col-sm-7">{{auth.userProfile.given_name}}</p>
+                </div>
+                <div class="form-group row" *ngIf="auth.userProfile.family_name">
+                  <label class="col-xs-6 col-sm-5">Last name:</label>
+                  <p class="col-xs-6 col-sm-7">{{auth.userProfile.family_name}}</p>
+                </div>
+                <div class="form-group row" *ngIf="auth.userProfile.gender">
+                  <label class="col-xs-6 col-sm-5">Gender:</label>
+                  <p class="col-xs-6 col-sm-7">{{auth.userProfile.gender}}</p>
+                </div>
+                <div class="form-group row" *ngIf="auth.userProfile.gdy">
+                  <label class="col-xs-6 col-sm-5">Gender:</label>
+                  <p class="col-xs-6 col-sm-7">{{auth.userProfile.gdy}}</p>
+                </div>
+                <div class="form-group row" *ngIf="auth.userProfile.age">
+                  <label class="col-xs-6 col-sm-5">Age:</label>
+                  <p class="col-xs-6 col-sm-7">{{auth.userProfile.age}}</p>
+                </div>
+                <div class="form-group row" *ngIf="auth.userProfile.email">
+                  <label class="col-xs-6 col-sm-5">E-mail:</label>
+                  <p class="col-xs-6 col-sm-7">{{auth.userProfile.email}}</p>
+                </div>
+                <div class="form-group row" *ngIf="auth.userProfile.nickname">
+                  <label class="col-xs-6 col-sm-5">Nickname:</label>
+                  <p class="col-xs-6 col-sm-7">{{auth.userProfile.nickname}}</p>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-  </div>
+    </div>
   </div>
   <div *ngIf="!auth.authenticated()">
     <h1>Sorry, you have to log in!</h1>
