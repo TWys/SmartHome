@@ -4,30 +4,30 @@
 
     <div class="row status_bar">
       <div class="status">Witaj <span class="user_name" (click)="fprofil(1)">{{auth.userProfile.name}}</span>!</div>
-      <img src="../../assets/img/svg/en.svg" alt="english language" class="flag"/>
-      <img src="../../assets/img/svg/pl.svg" alt="polish language" class="flag"/>
+      <!--<img src="../../assets/img/svg/en.svg" alt="english language" class="flag"/>-->
+      <!--<img src="../../assets/img/svg/pl.svg" alt="polish language" class="flag"/>-->
       <!--<img src="../../assets/img/svg/de.svg" alt="german language" class="flag"/>-->
       <!--<img src="../../assets/img/svg/ua.svg" alt="ukrainian language" class="flag"/>-->
     </div>
     <div class="row rect">
-      <div class="col-xs-12 col-sm-7 logo">{{title}}</div>
+      <div class="col-xs-12 col-sm-8 logo">{{title}}</div>
 
-      <div class="hidden-xs col-sm-5 zegar" id='calendar'></div>
+      <div class="hidden-xs col-sm-4 zegar" id='calendar'></div>
       <div style="clear:both;"></div>
     </div>
 
   </div>
   <div class="container">
     <div class="row">
-      <div class="col-xs-12 col-md-6 col-md-push-6 square">
-        <div class="col-xs-12 tile5" id="tekst" *ngIf="wybranaFunkcja=='temperatura'">
+      <div class="col-xs-12 col-md-6 col-md-push-6 display">
+        <div class="col-xs-12 tile5"  *ngIf="wybranaFunkcja=='temperatura'">
           <app-temperature> </app-temperature>
         </div>
-        <div class="col-xs-12 tile5" id="tekst" *ngIf="wybranaFunkcja=='oswietlenie'">
+        <div class="col-xs-12 tile5"  *ngIf="wybranaFunkcja=='oswietlenie'">
           <app-light> </app-light>
         </div>
       </div>
-      <div class="col-xs-12 col-md-6 col-md-pull-6 square">
+      <div class="col-xs-12 col-md-6 col-md-pull-6 display">
         <div class="tiles">
           <div class="col-xs-12 col-md-5 tile1" (click)="wybierzFunkcje('temperatura')"><i class="fa fa-thermometer-half" aria-hidden="true"></i><br/>Temperatura
           </div>
@@ -35,8 +35,8 @@
           </div>
           <div style="clear:both;"></div>
 
-          <div class="col-xs-12 col-md-5 tile2" (click)="wybierzFunkcje('rolety')"><i class="fa fa-moon-o" aria-hidden="true"></i><br/>Rolety</div>
-          <div class="col-xs-12 col-md-5 tile3"(click)="wybierzFunkcje('wilgotnosc')"><i class="fa fa-tint" aria-hidden="true"></i><br/>Wilgotność</div>
+          <div class="col-xs-12 col-md-5 tile1" (click)="wybierzFunkcje('rolety')"><i class="fa fa-moon-o" aria-hidden="true"></i><br/>Rolety</div>
+          <div class="col-xs-12 col-md-5 tile1"(click)="wybierzFunkcje('wilgotnosc')"><i class="fa fa-tint" aria-hidden="true"></i><br/>Wilgotność</div>
           <div style="clear:both;"></div>
         </div>
       </div>

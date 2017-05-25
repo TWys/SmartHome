@@ -8,7 +8,7 @@ import { Auth } from '../auth.service';
 })
 export class FunctionsComponent implements OnInit {
 
-  title= 'Smart Home';
+  title= 'Panel Sterowania';
 
 
   // public clock() {
