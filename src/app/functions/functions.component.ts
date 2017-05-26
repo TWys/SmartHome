@@ -57,6 +57,7 @@ export class FunctionsComponent implements OnInit {
     // console.log(this.wybranaFunkcja);
     return funkcja;
   }
-  constructor(private auth: Auth) {};
+
 }
+
 
