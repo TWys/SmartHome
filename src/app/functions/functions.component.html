@@ -3,14 +3,14 @@
     <div class="container">
 
       <div class="row status_bar">
-        <div class="status">Witaj <span class="user_name" (click)="fprofil(1)">{{auth.userProfile.name}}</span>!</div>
+        <div class="status">{{'functions.hello' | translate}}<span class="user_name" (click)="fprofil(1)">{{auth.userProfile.name}}</span>!</div>
         <!--<img src="../../assets/img/svg/en.svg" alt="english language" class="flag"/>-->
         <!--<img src="../../assets/img/svg/pl.svg" alt="polish language" class="flag"/>-->
         <!--<img src="../../assets/img/svg/de.svg" alt="german language" class="flag"/>-->
         <!--<img src="../../assets/img/svg/ua.svg" alt="ukrainian language" class="flag"/>-->
       </div>
       <div class="row rect">
-        <div class="col-xs-12 col-sm-8 logo">{{title}}</div>
+        <div class="col-xs-12 col-sm-8 logo">{{'functions.title' | translate}}</div>
 
         <div class="hidden-xs col-sm-4 zegar" id='calendar'></div>
         <div style="clear:both;"></div>

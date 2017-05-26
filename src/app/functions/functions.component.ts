@@ -8,7 +8,7 @@ import { Auth } from '../auth.service';
 })
 export class FunctionsComponent implements OnInit {
 
-  title= 'Smart Home';
+
 
 
   // public clock() {
@@ -49,6 +49,7 @@ export class FunctionsComponent implements OnInit {
   constructor(private auth: Auth) {};
 
   public wybranaFunkcja;
+
 
   public wybierzFunkcje = (funkcja) => {
     // console.log(funkcja);

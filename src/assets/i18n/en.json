@@ -22,5 +22,9 @@
 "title":"About us",
 "team":"We are a professional team",
 "students":"Students of the Department of ETI in the field of Internet Applications and Services"
+  },
+  "functions":{
+    "hello":"Hello ",
+    "title":"Control panel"
   }
 }

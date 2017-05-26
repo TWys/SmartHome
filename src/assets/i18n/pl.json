@@ -21,5 +21,10 @@
     "title":"O nas",
     "team":"Stanowimy profesjonalny zespół",
     "students":"Studenci wydziału ETI kierunku Aplikacje i usługi internetowe"
+  },
+  "functions":{
+    "hello":"Witaj ",
+  "title":"Panel zarządzania"
   }
+
 }
