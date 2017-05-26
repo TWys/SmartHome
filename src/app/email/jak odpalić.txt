@@ -1,5 +1,0 @@
-1. Zainstaluj oprogramowanie XAMPP
-2. Przenieœ ca³y ten folder do ...\XAMPP\htdocs
-3. W panelu kontrolnym XAMPP uruchom serwery
-4. W przegl¹darce wpisz:	localhost/formularz kontaktowy/index.html
-5. Wiadomoœci przychodz¹ na naszego grupowego maila
