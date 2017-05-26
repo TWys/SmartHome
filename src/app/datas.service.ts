@@ -7,7 +7,7 @@ import {MockBackend, MockConnection} from '@angular/http/testing';
 @Injectable()
 export class DatasService {
 
-  public response = '{"temperature":[{"actual":25,"requested":26},{"actual":24.5,"requested":24},{"actual":18.9,"requested":24},{"actual":17.5,"requested":24},{"actual":28.4,"requested":24},{"actual":30.0,"requested":24},{"actual":21.8,"requested":24},{"actual":16.9,"requested":24},{"actual":27.1,"requested":24},{"actual":16,"requested":24}]}';
+  public response = '{"temperature":[{"actual":25,"requested":26},{"actual":24.5,"requested":24},{"actual":18.9,"requested":24},{"actual":17.5,"requested":24},{"actual":28.4,"requested":24},{"actual":30.0,"requested":24},{"actual":21.8,"requested":24},{"actual":16.9,"requested":24},{"actual":27.1,"requested":24},{"actual":16,"requested":24}],"light":[{"status":0},{"status":1}]}';
 
   // public tempe = {
   //   value: 25.0,
@@ -28,16 +28,5 @@ export class DatasService {
     // console.log(x);
     this.temperatures.value = JSON.parse(this.response).temperature[x].actual;
     return this.temperatures.value;
-  }
-
-  fGetLightStatus(x) {
-    if (x==0) {
-      document.getElementById('bulb').style.fill = 'black';
-      return 0;
-    }
-    else if (x==1) {
-      document.getElementById('bulb').style.fill = 'yellow';
-      return 1;
-    }
   }
 }
