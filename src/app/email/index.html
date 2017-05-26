@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
+    <title>Formularz kontaktowy</title>
+    <link href="contact.css" rel="stylesheet" type="text/css" /> <!-- Styl -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,300,400,600&subset=latin-ext' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+    <script type="text/javascript" src="jquery.mail.js"></script>   <!-- Obsługa AJAX -->   
+</head>
+
+<body>    
+    <div id="contact">
+        
+        <h1>FORMULARZ KONTAKTOWY</h1>
+        
+        <div id="message"></div>
+        <form method="post" action="contact.php" name="contactform" id="contactform">
+            <fieldset>
+                <legend>W celu kontaktu z biurem SmartHome prosimy wypełnić poniższy formularz.</legend>
+                <label for="name">Imię i nazwisko<span class="required">*</span></label>
+                    <input name="name" type="text" id="name" size="30" value="" placeholder="Jan Kowalski" />
+                
+                <label for="email">Adres email<span class="required">*</span></label>
+                    <input name="email" type="text" id="email" size="30" value="" placeholder="przykładowy@adres.com" />
+                
+                <label for="subject">Temat wiadomości</label>
+                    <select name="subject" id="subject" >
+                        <option value="Problem">Problemy techniczne</option>
+                        <option value="Zamowienie">Zamówienie</option>
+                        <option value="Reklamacja">Reklamacja</option>
+                        <option value="Inne">Inne</option>
+                    </select> <br />
+                    
+                <label for="comments">Treść wiadomości<span class="required">*</span></label>
+                    <textarea name="comments" cols="40" rows="3" id="comments" placeholder="Przykładowa treść wiadomości..."></textarea>    
+                
+                <p>Podaj wynik działania<span class="required">*</span></p>
+                <label for="verify" accesskey="V">15 + 7 =</label>
+                    <input name="verify" type="text" id="verify" size="4" value="" style="width: 40px;" placeholder="Wynik" /> <br />
+                    
+                <input type="submit" class="submit" id="submit" value="Wyślij wiadomość" />
+                
+                <p><span class="required">*</span> - Pola obowiązkowe.</p>
+            </fieldset>
+        </form>
+        
+    </div>
+    
+</body>
+</html>

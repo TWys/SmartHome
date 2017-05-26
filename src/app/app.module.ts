@@ -6,6 +6,7 @@ import { AUTH_PROVIDERS } from 'angular2-jwt';
 
 import { AppComponent } from './app.component';
 import { ContactComponent } from './contact/contact.component';
+//import { EmailComponent } from "./email/email.component";
 import { HomeComponent } from './home/home.component';
 import { FunctionsComponent } from './functions/functions.component';
 import { AboutComponent } from './about/about.component';
@@ -23,6 +24,7 @@ import { TRANSLATION_PROVIDERS, TranslatePipe, TranslateService }   from './tran
   declarations: [
     AppComponent,
     ContactComponent,
+    //EmailComponent,
     HomeComponent,
     FunctionsComponent,
     AboutComponent,
@@ -42,6 +44,7 @@ import { TRANSLATION_PROVIDERS, TranslatePipe, TranslateService }   from './tran
     appRoutingProviders,
     AUTH_PROVIDERS,
     TranslateService,
+    //EmailService,
     TRANSLATION_PROVIDERS
   ],
   bootstrap: [AppComponent]
