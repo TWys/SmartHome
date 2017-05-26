@@ -21,7 +21,7 @@ body {
   padding: 0 !important;
 }
 
-.square {
+.display {
   /*width:50%;*/
   float: left;
 }
@@ -104,14 +104,14 @@ div.col-sm-2 zegar {
   line-height: 150%;
 }
 
-.tile5 {
-  margin: 10px;
-  /*width:420px;*/
-  /*height:244px;*/
-  background-color: #666666;
-  text-align: justify;
-  padding: 30px;
-}
+/*.tile5 {*/
+  /*margin: 10px;*/
+  /*/*width:420px;*/*/
+  /*/*height:244px;*/*/
+  /*background-color: #666666;*/
+  /*text-align: justify;*/
+  /*padding: 30px;*/
+/*}*/
 
 /*.col-md-8.tiles > .tile1*/
 /*{*/
