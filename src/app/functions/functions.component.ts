@@ -8,7 +8,8 @@ import { Auth } from '../auth.service';
 })
 export class FunctionsComponent implements OnInit {
 
-  title= 'Smart Home';
+  title= 'Panel Sterowania';
+
 
   // public clock() {
   //   let date= new Date();
@@ -36,9 +37,26 @@ export class FunctionsComponent implements OnInit {
   //
   // }
 
+  fprofil(x) {
+  if (x==1) document.getElementById('profile_container').style.display = 'block';
+  else if (x==0) document.getElementById('profile_container').style.display = 'none';
+}
+
   public ngOnInit(): any
   {
     // this.clock();
   }
   constructor(private auth: Auth) {};
+
+  public wybranaFunkcja;
+
+  public wybierzFunkcje = (funkcja) => {
+    // console.log(funkcja);
+    if(this.wybranaFunkcja == funkcja) return;
+    this.wybranaFunkcja = funkcja;
+    // console.log(this.wybranaFunkcja);
+    return funkcja;
+  }
+  constructor(private auth: Auth) {};
 }
+

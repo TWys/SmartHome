@@ -1,0 +1,50 @@
+@font-face {
+  font-family: digital;
+  src: url(../../assets/font-awesome/fonts/digital.ttf);
+}
+
+.temperatures {
+  text-align: center;
+  font-size: 25px;
+  height: 150px !important;
+}
+
+.description {
+  font-size: 25px;
+  padding-top: 15px;
+}
+
+.temperature_box {
+  font-family: 'digital', monospace;
+  background-color: #0f0f0f;
+  border-radius: 10px;
+  font-size: 50px;
+  line-height: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#temperature_minus {
+  border-bottom-left-radius: 25px;
+  border-top-left-radius: 25px;
+}
+
+#temperature_plus {
+  border-bottom-right-radius: 25px;
+  border-top-right-radius: 25px;
+}
+
+/*#actual_temp {*/
+  /*color: darkgreen;*/
+/*}*/
+
+#celcius {
+  color: white;
+}
+
+
+@media (max-width: 768px) {
+  .description {
+    font-size: 20px;
+  }
+}

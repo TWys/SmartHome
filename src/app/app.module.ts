@@ -17,7 +17,11 @@ import { GalleryComponent } from './gallery/gallery.component';
 import { NavbarComponent } from './navbar/navbar.component';
 
 import { TRANSLATION_PROVIDERS, TranslatePipe, TranslateService }   from './translate';
-
+import { TemperatureComponent } from './temperature/temperature.component';
+import { LightComponent } from './light/light.component';
+import {MockBackend} from "@angular/http/testing";
+import {BaseRequestOptions, Http} from "@angular/http";
+//import {DatasService} from "./datas.service";
 
 
 @NgModule({
@@ -32,7 +36,9 @@ import { TRANSLATION_PROVIDERS, TranslatePipe, TranslateService }   from './tran
     LoginComponent,
     GalleryComponent,
     NavbarComponent,
-    TranslatePipe
+    TranslatePipe,
+    TemperatureComponent,
+    LightComponent
   ],
   imports: [
     BrowserModule,
@@ -44,13 +50,17 @@ import { TRANSLATION_PROVIDERS, TranslatePipe, TranslateService }   from './tran
     appRoutingProviders,
     AUTH_PROVIDERS,
     TranslateService,
-    //EmailService,
-    TRANSLATION_PROVIDERS
+    TRANSLATION_PROVIDERS,
+    MockBackend,
+    BaseRequestOptions,
+    {
+      provide: Http,
+      deps: [MockBackend, BaseRequestOptions],
+      useFactory: (backend: MockBackend, options: BaseRequestOptions) => { return new Http(backend, options); }
+    },
+//    DatasService
   ],
   bootstrap: [AppComponent]
 })
 
-
-
 export class AppModule { }
-

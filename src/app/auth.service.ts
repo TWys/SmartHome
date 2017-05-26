@@ -11,10 +11,28 @@ export class Auth {
   // Configure Auth0
   lock = new Auth0Lock('O6FjuhA8WYFEjVtIzmUBkT17kvh45G5X', 'pawell67.auth0.com',options );
 
+  //Store profile object in auth class
+  userProfile: Object;
+
   constructor() {
+    // Set userProfile attribute of already saved profile
+    this.userProfile = JSON.parse(localStorage.getItem('profile'));
+
     // Add callback for lock `authenticated` event
     this.lock.on("authenticated", (authResult) => {
       localStorage.setItem('id_token', authResult.idToken);
+
+      // Fetch profile information
+      this.lock.getProfile(authResult.idToken, (error, profile) => {
+        if (error) {
+          // Handle error
+          alert(error);
+          return;
+        }
+
+        localStorage.setItem('profile', JSON.stringify(profile));
+        this.userProfile = profile;
+      });
     });
   }
 
@@ -32,5 +50,7 @@ export class Auth {
   public logout() {
     // Remove token from localStorage
     localStorage.removeItem('id_token');
+    localStorage.removeItem('profile');
+    this.userProfile = undefined;
   }
 }
