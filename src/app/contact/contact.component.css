@@ -7,14 +7,14 @@
 
     #form_contact {
       display: block;
-      width: 650px;
+      width: 70%;
+      height: 90%;
       margin: 50px auto;
       padding: 35px;
       background-color: #FFF;
       -webkit-border-radius:5px;
       color: black;
       max-width: 100% !important;
-      height: auto;
     }
 
     #form_contact label { display: inline-block; float: left; height:36px; line-height: 36px; width: 155px; font-size: 13px;  color: black;}
@@ -23,7 +23,7 @@
     #form_contact input.submit { width: 160px; cursor: pointer; background:#99cd45; color:#fff; }
     #form_contact input.submit:hover { background:#81a842; }
     #form_contact input[type="submit"][disabled] { background:#99cd45; }
-    #form_contact fieldset {border-style: none; padding-left: 0px;}
+    #form_contact fieldset {border-style: none; padding-left: 0px; max-width: 100% !important;}
     #form_contact legend { padding-bottom: 10px; font-weight:bold; color:#000;  text-align: center; font-size: medium;}
     #form_contact span.required{ font-size: 13px; color: #ff0000; }
     #message { margin: 10px 0; padding: 0; }
@@ -58,7 +58,11 @@
     text-align: center;
     margin: 0 auto;
     top: 0;
-    left: 25%;
-    width: 50% !important;
+    left: 15%;
+    width: 70% !important;
     height: 70% !important;
+  }
+
+  .form-container iframe {
+    width: 100% !important;
   }
