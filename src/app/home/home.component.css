@@ -4,9 +4,12 @@
 }
 
 .home {
-  background: url(../../assets/img/house.jpg)center no-repeat;
+  background: url(../../assets/img/house.jpg)center center no-repeat;
   width: 100%;
   height: 100vh;
+  position: relative;
+  top: 30px;
+
 }
 
 .logo img {
@@ -14,6 +17,8 @@
   height: auto;
   fill: #000;
   margin: 0;
+  position: relative;
+  top: -8px;
 }
 
 .call-to-action h1 {
@@ -40,7 +45,7 @@
 }
 
 .navbar {
-  opacity: 0.9;
+  opacity: 0.95;
 }
 
 .dropdown-menu li a img {

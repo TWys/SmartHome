@@ -1,0 +1,99 @@
+.light {
+  text-align: center;
+  font-size: 25px;
+  height: 20vw;
+}
+
+.description {
+  font-size: 25px;
+  padding-top: 15px;
+}
+
+.datas {
+  padding-bottom: 10px;
+}
+
+.switcher {
+  transform: scale(0.5);
+  /*height: 30vw;*/
+}
+
+.bulb {
+  transform: scale(0.5);
+  /*height: 10vw;*/
+}
+
+#turn_off:hover {
+  cursor: pointer;
+}
+
+#turn_on:hover {
+  cursor: pointer;
+}
+
+/*@media screen and (max-width: 375px) {*/
+  /*.light {*/
+    /*height: 150px;*/
+    /*padding-top: 15px;*/
+  /*}*/
+/*}*/
+
+/*@media screen and (min-width: 375px) and (max-width: 425px) {*/
+
+
+@media screen and (max-width: 768px) {
+  .bulb {
+    height: 20vw;
+  }
+  .switcher {
+    height: 20vw;
+  }
+  .description {
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 425px) and (max-width: 991px) {
+  .bulb {
+    height: 10vw;
+    /*transform: scale(0.3);*/
+  }
+  .switcher {
+    height: 10vw;
+    /*transform: scale(0.3);*/
+  }
+  .description {
+    /*padding-top: 5px;*/
+  }
+  .datas {
+    /*padding-top: 0px;*/
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1220px) {
+  .bulb {
+    /*height: 10vw;*/
+    transform: scale(0.55);
+  }
+  .switcher {
+    /*height: 10vw;*/
+    transform: scale(0.55);
+  }
+  .datas {
+    padding-top: 10px;
+  }
+}
+
+@media screen and (min-width: 1220px) {
+  .bulb {
+    /*height: 10vw;*/
+    transform: scale(0.55);
+  }
+  .switcher {
+    /*height: 10vw;*/
+    transform: scale(0.55);
+  }
+  .datas {
+    padding-top: 10px;
+  }
+}
