@@ -18,6 +18,10 @@ ul li {
   font-size: 0.5em;
   letter-spacing: 2px;
   padding: 0 10px 10px;
+  color:#ffffff;
+}
+ul li a:visited {
+  color:#ffffff;
 }
 
 ul li:after {

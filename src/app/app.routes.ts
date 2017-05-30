@@ -11,6 +11,7 @@ import {ContactComponent}               from './contact/contact.component';
 
 const appRoutes: Routes = [
   {path: '', component: HomeComponent},
+  {path: 'home', component: HomeComponent},
   {path: 'functions', component: FunctionsComponent},
   {path: 'gallery', component: GalleryComponent},
   {path: 'offer', component: OfferComponent},
