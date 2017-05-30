@@ -79,4 +79,3 @@ import {OfferComponent} from './offer/offer.component';
 
 export class AppModule {
 }
-
