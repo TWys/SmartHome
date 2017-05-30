@@ -15,10 +15,10 @@
       <div id="navbar" class="navbar-collapse collapse">
         <ul class="nav navbar-nav navbar-right">
           <li class="active"><a href="#home">Home</a></li>
-          <li><a href="#about">{{ 'navbar.about' | translate }}</a></li>
+          <li><a routerLink="about">{{ 'navbar.about' | translate }}</a></li>
           <li><a routerLink="gallery">{{  'navbar.gallery' | translate }}</a></li>
-          <li><a href="#offer">{{  'navbar.offer' | translate   }}</a></li>
-          <li><a href="#contact">{{  'navbar.contact' | translate  }}</a></li>
+          <li><a routerLink="offer">{{  'navbar.offer' | translate   }}</a></li>
+          <li><a routerLink="contact">{{  'navbar.contact' | translate  }}</a></li>
           <li class="dropdown">
             <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                aria-expanded="false">{{  'navbar.language' | translate }}<span class="caret"></span></a>
@@ -43,4 +43,3 @@
       </div>
     </div>
   </nav>
-

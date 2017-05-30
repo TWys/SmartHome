@@ -13,7 +13,7 @@
 .about p:last-of-type{
   padding-top:5%;
   font-weight: normal;
-  letter-spacing: 0px;
+  letter-spacing: 0;
 }
 
 .about h1{
