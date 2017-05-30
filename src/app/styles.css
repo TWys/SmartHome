@@ -186,10 +186,10 @@ a {
   background-color: #c84222;
 }
 
-.fa {
-  font-size: 60px !important;
-  padding-top: 30px !important;
-}
+/*.fa {*/
+  /*font-size: 60px !important;*/
+  /*padding-top: 30px !important;*/
+/*}*/
 
 .login-button a {
   display: block;

@@ -1,0 +1,73 @@
+@import '../../assets/font-awesome/css/font-awesome.css';
+
+
+.blinds_img {
+  max-width: 80%;
+  padding-bottom: 10px;
+}
+
+.description {
+  text-align: center;
+  font-size: 25px;
+  padding-top: 15px;
+}
+
+.blinds {
+  text-align: center;
+}
+
+.set_blinds {
+  line-height: 100%;
+  margin-top: 10px;
+}
+
+.buttons {
+  text-align: center;
+  padding-top: 10px;
+  line-height: 100%;
+  vertical-align: middle;
+}
+
+.fa {
+  font-size: 25px!important;
+}
+
+@media screen and (max-width: 375px) {
+  .blinds_img {
+    max-width: 80%;
+    margin-top: 10px;
+  }
+  .buttons {
+    font-size: 10px!important;
+    margin-top: -10px;
+  }
+}
+
+@media screen and (min-width: 375px) and (max-width: 425px) {
+  .blinds_img {
+    max-width: 60%;
+    margin-top: 10px;
+  }
+  .buttons {
+    margin-top: -10px;
+  }
+}
+
+@media screen and (min-width: 426px) and (max-width: 767px) {
+  .blinds_img {
+    max-width: 60%;
+    margin-top: 10px;
+  }
+  .buttons {
+    margin-top: -5px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .blinds_img {
+    max-width: 60%;
+  }
+  .set_blinds {
+    font-size: 20px;
+  }
+}

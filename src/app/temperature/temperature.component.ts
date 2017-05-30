@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DatasService } from '../datas.service';
-import { Temperatures } from '../temperatures';
+import { Datas } from '../datas';
 //import { Http } from '@angular/http'
 import {MockBackend} from "@angular/http/testing";
 
@@ -8,18 +8,19 @@ import {MockBackend} from "@angular/http/testing";
   selector: 'app-temperature',
   templateUrl: './temperature.component.html',
   styleUrls: ['./temperature.component.css','../../assets/bootstrap/css/bootstrap.css'],
-  providers: [DatasService, Temperatures]
+  providers: [DatasService, Datas]
 })
 export class TemperatureComponent implements OnInit {
   private setted_temp: number;
   private actual_temp: any;
+  private timer;
 
   constructor(private datasService: DatasService, private backend: MockBackend) {}
 
   // fSetTemperature(x) {
-  //   if (x=='-') this.datasService.temperatures.requeted--;
-  //   else if (x=='+') this.datasService.temperatures.requeted++;
-  //   this.setted_temp=this.datasService.temperatures.requeted;
+  //   if (x=='-') this.datasService.temperatures.requeted_temp--;
+  //   else if (x=='+') this.datasService.temperatures.requeted_temp++;
+  //   this.setted_temp=this.datasService.temperatures.requeted_temp;
   //   console.log(this.setted_temp);
   // }
 
@@ -31,13 +32,17 @@ export class TemperatureComponent implements OnInit {
     if (this.actual_temp%1 == 0) this.actual_temp = this.actual_temp+'.0';
 
 
-    setTimeout(() => {
+    this.timer=setTimeout(() => {
       this.fGetActualTemperature();
     }, 5000);
   }
 
   ngOnInit() {
     this.fGetActualTemperature();
+  }
+
+  ngOnDestroy() {
+    clearTimeout(this.timer);
   }
 
 }
