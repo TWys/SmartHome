@@ -27,11 +27,6 @@
   margin-right: auto;
 }
 
-/*#actual_temp {*/
-/*color: darkgreen;*/
-/*}*/
-
-
 @media (max-width: 768px) {
   .description {
     font-size: 20px;

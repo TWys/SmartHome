@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DatasService } from '../datas.service';
 import { Datas } from '../datas';
-//import { Http } from '@angular/http'
 import {MockBackend} from "@angular/http/testing";
 
 @Component({
@@ -17,18 +16,12 @@ export class TemperatureComponent implements OnInit {
 
   constructor(private datasService: DatasService, private backend: MockBackend) {}
 
-  // fSetTemperature(x) {
-  //   if (x=='-') this.datasService.temperatures.requeted_temp--;
-  //   else if (x=='+') this.datasService.temperatures.requeted_temp++;
-  //   this.setted_temp=this.datasService.temperatures.requeted_temp;
-  //   console.log(this.setted_temp);
-  // }
+  fSetTemperature(x) {
+
+  }
 
   fGetActualTemperature () {
     this.actual_temp=this.datasService.fGetTemperature();
-    // if (this.actual_temp < 18) document.getElementById('actual_temp').style.color="blue";
-    // else if (this.actual_temp > 26) document.getElementById('actual_temp').style.color="red";
-    // else document.getElementById('actual_temp').style.color="white";
     if (this.actual_temp%1 == 0) this.actual_temp = this.actual_temp+'.0';
 
 

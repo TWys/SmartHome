@@ -246,21 +246,18 @@ a
 @media screen and (max-width: 375px) {
   .tile5 {
     height: 50vw;
-    /*padding-top: 15px;*/
   }
 }
 
 @media screen and (min-width: 375px) and (max-width: 425px) {
   .tile5 {
     height: 150px;
-    /*padding-top: -15px;*/
   }
 }
 
 @media screen and (min-width: 425px) and (max-width: 991px) {
   .tile5 {
     height: 35vw;
-    /*padding-top: 15px;*/
   }
 }
 
