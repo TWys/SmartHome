@@ -6,6 +6,4 @@ import { Component } from '@angular/core';
   styleUrls: ['../app.component.css', './gallery.component.css', '../../assets/bootstrap/css/bootstrap.css']
 })
 export class GalleryComponent {
-  title='Zarządzanie inteligentnym domem'
 }
-
