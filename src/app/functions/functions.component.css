@@ -286,7 +286,7 @@ a
 
 @media screen and (min-width: 992px) {
   .tile5 {
-    height: 300px;
-    /*padding-top: 15px;*/
+    /*height: 15vw;*/
+    /*padding-top: 0.15vw;*/
   }
 }
