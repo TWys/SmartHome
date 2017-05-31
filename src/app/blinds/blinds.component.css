@@ -8,24 +8,40 @@
 
 .description {
   text-align: center;
+  background-color: #444444;
   font-size: 25px;
-  padding-top: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 5px;
+  border-radius: 10px;
 }
 
 .blinds {
   text-align: center;
 }
 
-.set_blinds {
-  line-height: 100%;
+.blinds_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#blinds_down {
   margin-top: 10px;
+}
+
+.datas {
+  display: flex;
+  align-items: center;
 }
 
 .buttons {
   text-align: center;
   padding-top: 10px;
-  line-height: 100%;
-  vertical-align: middle;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
 }
 
 .fa {
@@ -41,6 +57,13 @@
     font-size: 10px!important;
     margin-top: -10px;
   }
+  .description {
+    font-size: 20px;
+  }
+  .set_blinds {
+    height: 30px;
+    padding: 0px!important;
+  }
 }
 
 @media screen and (min-width: 375px) and (max-width: 425px) {
@@ -51,6 +74,13 @@
   .buttons {
     margin-top: -10px;
   }
+  .description {
+    font-size: 20px;
+  }
+  .set_blinds {
+    height: 30px;
+    padding: 0px!important;
+  }
 }
 
 @media screen and (min-width: 426px) and (max-width: 767px) {
@@ -60,6 +90,9 @@
   }
   .buttons {
     margin-top: -5px;
+  }
+  .description {
+    font-size: 20px;
   }
 }
 

@@ -11,12 +11,16 @@ import { Datas } from '../datas';
 export class HumidityComponent implements OnInit {
   private actual_hum: number;
   private timer;
+  private abs_hum: number;
+  private B4: number = -25;
+  private C2: number = 90;
 
   constructor(private datasService: DatasService) { }
 
   fGetActualHumidity () {
     this.actual_hum=this.datasService.fGetHumidity();
-    console.log(this.actual_hum);
+    this.abs_hum = ((0.000002*this.B4^4)+(0.0002*this.B4^3)+(0.0095*this.B4^2)+( 0.337*this.B4)+4.9034)*this.C2/1000;
+    console.log(this.abs_hum);
 
     this.timer = setTimeout(() => {
       this.fGetActualHumidity();
