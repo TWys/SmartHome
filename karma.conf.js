@@ -16,7 +16,7 @@ module.exports = function(config) {
     // list of files / patterns to load in the browser
     files: [
       "src/assets/js/jquery.min.js",   // Link do jquery
-      "src/**/*.js",                   // Wszystkie pliki js projektu
+      "src/app/*.js",                   // Wszystkie pliki js projektu
       "test/*.js",                     // Testy
       "test/test.js"                   // Test
     ],
@@ -31,13 +31,6 @@ module.exports = function(config) {
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
     },
-
-
-    // test results reporter to use
-    // possible values: 'dots', 'progress'
-    // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-    reporters: ['progress'],
-
 
     // web server port
     port: 9876,
@@ -64,6 +57,22 @@ module.exports = function(config) {
       //"PhantomJS"                     // Specjalny plugin do testów
     ],
 
+    plugins:   [
+      'karma-chrome-launcher',
+      'karma-firefox-launcher',
+      'karma-jasmine',
+      'karma-junit-reporter'
+    ],
+
+    // test results reporter to use
+    // possible values: 'dots', 'progress'
+    // available reporters: https://npmjs.org/browse/keyword/karma-reporter
+
+    reporters: ['progress', 'junit'],
+
+    junitReporter: {
+      outputFile: 'test/report_unit.xml'
+    },
 
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits
