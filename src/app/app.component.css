@@ -1,10 +1,10 @@
-*{
+* {
   margin: 0;
   padding: 0;
 }
 
 .home {
-  background: url(../assets/img/house.jpg)center center no-repeat;
+  background: url(../assets/img/house.jpg) center center no-repeat;
   width: 100%;
   height: 100vh;
 }
@@ -36,7 +36,7 @@
   padding-right: 0;
 }
 
-.navbar-default,.navbar, .navbar-fixed-top {
+.navbar-default, .navbar, .navbar-fixed-top {
   width: 100vw;
 }
 
@@ -44,21 +44,21 @@
   opacity: 0.95;
 }
 
-.dropdown-menu li{
-  color:#8e8e8e;
+.dropdown-menu li {
+  color: #8e8e8e;
   cursor: pointer;
 }
 
-.dropdown-menu li:hover{
-  color:#757575;
+.dropdown-menu li:hover {
+  color: #757575;
   background-color: #dddddd;
 }
 
-.dropdown-menu li img{
+.dropdown-menu li img {
   width: 25px;
   height: auto;
   margin-right: 10px;
-  margin-left:10px;
+  margin-left: 10px;
 }
 
 .move-down {
