@@ -27,6 +27,8 @@ import {FooterComponent} from './footer/footer.component'
 import {TemperatureComponent} from './temperature/temperature.component';
 import {LightComponent} from './light/light.component';
 import {MockBackend} from "@angular/http/testing";
+import {HumidityComponent} from './humidity/humidity.component';
+import {BlindsComponent} from './blinds/blinds.component';
 
 
 @NgModule({
@@ -42,7 +44,9 @@ import {MockBackend} from "@angular/http/testing";
     NavbarComponent,
     FooterComponent,
     TemperatureComponent,
-    LightComponent
+    LightComponent,
+    HumidityComponent,
+    BlindsComponent
   ],
   imports: [
     BrowserModule,
@@ -59,17 +63,10 @@ import {MockBackend} from "@angular/http/testing";
     appRoutingProviders,
     AUTH_PROVIDERS,
     TranslateService,
-    // { provide: TranslateLoader, useFactory: (http: Http) => new TranslateStaticLoader(http, 'assets/i18n', '.json'), deps: [Http] },
+
     {provide: MissingTranslationHandler, useClass: MyMissingTranslationHandler},
     MockBackend,
-    BaseRequestOptions,
-    // {
-    //   provide: Http,
-    //   deps: [MockBackend, BaseRequestOptions],
-    //   useFactory: (backend: MockBackend, options: BaseRequestOptions) => {
-    //     return new Http(backend, options);
-    //   }
-    // },
+    BaseRequestOptions
   ],
   bootstrap: [AppComponent]
 

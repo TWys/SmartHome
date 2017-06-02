@@ -15,6 +15,7 @@
   list-style: none;
   text-align: center;
 }
+
 .unslider-nav ol li {
   display: inline-block;
   width: 6px;
@@ -27,6 +28,7 @@
   border: 2px solid #fff;
   cursor: pointer;
 }
+
 .unslider-nav ol li.unslider-active {
   background: #fff;
   cursor: default;

@@ -1,0 +1,19 @@
+<div class="blinds">
+  <div class="row description">
+    <div class="col-xs-12">
+      Sterowanie roletami
+    </div>
+  </div>
+  <div class="row datas">
+    <div class="col-xs-6 buttons">
+      <button class="btn col-xs-12 set_blinds" id="blinds_up" (click)="fSetBlinds('1')">Podnieś <i
+        class="fa fa-arrow-up" aria-hidden="true"></i></button>
+      <button class="btn col-xs-12 set_blinds" id="blinds_down" (click)="fSetBlinds('0')">Opuść <i
+        class="fa fa-arrow-down" aria-hidden="true"></i></button>
+    </div>
+
+    <div class="col-xs-6 blinds_container">
+      <img src="{{imgSRC}}" class="blinds_img"/>
+    </div>
+  </div>
+</div>
