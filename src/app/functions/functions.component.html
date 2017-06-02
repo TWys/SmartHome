@@ -3,14 +3,10 @@
     <div class="container">
 
       <div class="row status_bar">
-        <div class="status">{{'functions.hello' | translate}}<span class="user_name" (click)="fprofil(1)">{{auth.userProfile.name}}</span>!</div>
-        <!--<img src="../../assets/img/svg/en.svg" alt="english language" class="flag"/>-->
-        <!--<img src="../../assets/img/svg/pl.svg" alt="polish language" class="flag"/>-->
-        <!--<img src="../../assets/img/svg/de.svg" alt="german language" class="flag"/>-->
-        <!--<img src="../../assets/img/svg/ua.svg" alt="ukrainian language" class="flag"/>-->
+        <div class="status">Witaj <span class="user_name" (click)="fprofil(1)">{{auth.userProfile.name}}</span>!</div>
       </div>
       <div class="row rect">
-        <div class="col-xs-12 col-sm-8 logo">{{'functions.title' | translate}}</div>
+        <div class="col-xs-12 col-sm-8 logo">{{title}}</div>
 
         <div class="hidden-xs col-sm-4 zegar" id='calendar'></div>
         <div style="clear:both;"></div>
@@ -20,11 +16,17 @@
     <div class="container">
       <div class="row">
         <div class="col-xs-12 col-md-6 col-md-push-6 display">
-          <div class="col-xs-12 tile5"  *ngIf="wybranaFunkcja=='temperatura'">
-            <app-temperature> </app-temperature>
+          <div class="col-xs-12 tile5" *ngIf="wybranaFunkcja=='temperatura'">
+            <app-temperature></app-temperature>
           </div>
-          <div class="col-xs-12 tile5"  *ngIf="wybranaFunkcja=='oswietlenie'">
-            <app-light> </app-light>
+          <div class="col-xs-12 tile5" *ngIf="wybranaFunkcja=='oswietlenie'">
+            <app-light></app-light>
+          </div>
+          <div class="col-xs-12 tile5" *ngIf="wybranaFunkcja=='wilgotnosc'">
+            <app-humidity></app-humidity>
+          </div>
+          <div class="col-xs-12 tile5" *ngIf="wybranaFunkcja=='rolety'">
+            <app-blinds></app-blinds>
           </div>
         </div>
         <div class="col-xs-12 col-md-6 col-md-pull-6 display">
@@ -48,10 +50,10 @@
           <div class="col-xs-12">
             <h2>Profile info</h2>
             <button (click)="fprofil(0)">X</button>
-            <br /><br />
+            <br/><br/>
             <div class="col-xs-12 col-sm-4 profile_photo">
               <img src={{auth.userProfile.picture}} alt="Zdjęcie profilowe" class="profile-img">
-              <br /><br />
+              <br/><br/>
             </div>
             <div class="col-xs-12 col-sm-8 profile_info">
               <form>

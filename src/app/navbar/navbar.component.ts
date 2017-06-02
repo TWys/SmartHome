@@ -37,9 +37,4 @@ export class NavbarComponent implements OnInit {
         }
       });
   }
-  //
-  // ngOnDestroy() {
-  //   // prevent memory leak by unsubscribing
-  //   this.subscription.unsubscribe();
-  // }
 }

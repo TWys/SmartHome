@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { Auth } from '../auth.service';
+import {Component} from '@angular/core';
+import {Auth} from '../auth.service';
 
 
 @Component({
@@ -7,5 +7,6 @@ import { Auth } from '../auth.service';
   template: ``
 })
 export class LoginComponent {
-  constructor(private auth: Auth) {}
+  constructor(private auth: Auth) {
+  }
 }

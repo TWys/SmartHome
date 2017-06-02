@@ -61,17 +61,10 @@ import {OfferComponent} from './offer/offer.component';
     appRoutingProviders,
     AUTH_PROVIDERS,
     TranslateService,
-    // { provide: TranslateLoader, useFactory: (http: Http) => new TranslateStaticLoader(http, 'assets/i18n', '.json'), deps: [Http] },
+
     {provide: MissingTranslationHandler, useClass: MyMissingTranslationHandler},
     MockBackend,
-    BaseRequestOptions,
-    // {
-    //   provide: Http,
-    //   deps: [MockBackend, BaseRequestOptions],
-    //   useFactory: (backend: MockBackend, options: BaseRequestOptions) => {
-    //     return new Http(backend, options);
-    //   }
-    // },
+    BaseRequestOptions
   ],
   bootstrap: [AppComponent]
 

@@ -7,4 +7,4 @@ import {NavbarComponent} from '../navbar/navbar.component'
   styleUrls: ['./home.component.css', '../../assets/bootstrap/css/bootstrap.css', '../app.component.css']
 })
 export class HomeComponent {
- }
+}

@@ -1,7 +1,7 @@
-import { TestBed, inject } from '@angular/core/testing';
+import {TestBed, inject} from '@angular/core/testing';
 import {MockBackend, MockConnection} from '@angular/http/testing';
 
-import { DatasService } from './datas.service';
+import {DatasService} from './datas.service';
 
 describe('DatasService', () => {
   beforeEach(() => {

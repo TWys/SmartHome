@@ -1,44 +1,42 @@
-import { Component, OnInit } from '@angular/core';
-import { DatasService } from '../datas.service';
-import { Temperatures } from '../temperatures';
-//import { Http } from '@angular/http'
+import {Component, OnInit} from '@angular/core';
+import {DatasService} from '../datas.service';
+import {Datas} from '../datas';
 import {MockBackend} from "@angular/http/testing";
 
 @Component({
   selector: 'app-temperature',
   templateUrl: './temperature.component.html',
-  styleUrls: ['./temperature.component.css','../../assets/bootstrap/css/bootstrap.css'],
-  providers: [DatasService, Temperatures]
+  styleUrls: ['./temperature.component.css', '../../assets/bootstrap/css/bootstrap.css'],
+  providers: [DatasService, Datas]
 })
 export class TemperatureComponent implements OnInit {
   private setted_temp: number;
   private actual_temp: any;
+  private timer;
 
-  constructor(private datasService: DatasService, private backend: MockBackend, private temperatures: Temperatures) {}
+  constructor(private datasService: DatasService, private backend: MockBackend) {
+  }
 
-  // fSetTemperature(x) {
-  //   if (x=='-') this.datasService.temperatures.requeted--;
-  //   else if (x=='+') this.datasService.temperatures.requeted++;
-  //   this.setted_temp=this.datasService.temperatures.requeted;
-  //   console.log(this.setted_temp);
-  // }
+  fSetTemperature(x) {
 
-  fGetActualTemperature () {
-    this.actual_temp=this.datasService.fGetTemperature();
-    if (this.actual_temp < 18) document.getElementById('actual_temp').style.color="blue";
-    else if (this.actual_temp > 26) document.getElementById('actual_temp').style.color="red";
-    else document.getElementById('actual_temp').style.color="white";
-    if (this.actual_temp%1 == 0) this.actual_temp = this.actual_temp+'.0';
+  }
+
+  fGetActualTemperature() {
+    this.actual_temp = this.datasService.fGetTemperature();
+    if (this.actual_temp % 1 == 0) this.actual_temp = this.actual_temp + '.0';
 
 
-    setTimeout(() => {
+    this.timer = setTimeout(() => {
       this.fGetActualTemperature();
     }, 5000);
   }
 
   ngOnInit() {
     this.fGetActualTemperature();
-    //this.setted_temp = this.actual_temp;
+  }
+
+  ngOnDestroy() {
+    clearTimeout(this.timer);
   }
 
 }
