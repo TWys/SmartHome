@@ -7,9 +7,7 @@
   background: url(../../assets/img/sh.png)center/cover no-repeat;
   width: 100%;
   min-height: 95vh;
-  /*position: relative;*/
-  /*top: 30px;*/
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 }
 
 .call-to-action h1 {
