@@ -28,6 +28,8 @@ import {TemperatureComponent} from './temperature/temperature.component';
 import {LightComponent} from './light/light.component';
 import {MockBackend} from "@angular/http/testing";
 import {OfferComponent} from './offer/offer.component';
+import {HumidityComponent} from './humidity/humidity.component';
+import {BlindsComponent} from './blinds/blinds.component';
 
 
 @NgModule({
@@ -44,7 +46,10 @@ import {OfferComponent} from './offer/offer.component';
     FooterComponent,
     TemperatureComponent,
     LightComponent,
-    OfferComponent
+    OfferComponent,
+    HumidityComponent,
+    BlindsComponent
+
   ],
   imports: [
     BrowserModule,
