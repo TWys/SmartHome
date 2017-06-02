@@ -1,8 +1,10 @@
 .about{
-  /*background: url(../../assets/img/team.jpg)center center no-repeat;*/
-  min-height: 100vh;
+  background: url(../../assets/img/team.jpg)center/cover no-repeat;
+  width: 100%;
+  min-height: 95vh;
   color:#000;
   font-size: 2em;
+  margin-bottom: 50px;
 }
 
 .about p{
@@ -14,10 +16,12 @@
   padding-top:5%;
   font-weight: normal;
   letter-spacing: 0;
+  margin-bottom: 0;
 }
 
 .about h1{
   padding-top:5%;
+  margin:0;
 }
 
 @media(max-width: 1024px){
@@ -26,7 +30,4 @@
   }
 }
 
-section#about.about.parallax-window{
-  position: relative;
-  top:-50px;
-}
+
