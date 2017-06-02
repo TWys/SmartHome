@@ -17,8 +17,12 @@ module.exports = function(config) {
     files: [
       "src/assets/js/jquery.min.js",   // Link do jquery
       "src/app/*.js",                   // Wszystkie pliki js projektu
+      "src/app/*/.js",                   // Wszystkie pliki js projektu
       "test/*.js",                     // Testy
-      "test/test.js"                   // Test
+      "src/app/services/services.component.spec.ts",                     // Testy
+      "test/test.js",                   // Test
+      "node_modules/angular/angular.js",
+      "node_modules/angular-mocks/angular-mocks.js",
     ],
 
 
