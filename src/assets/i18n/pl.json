@@ -24,6 +24,39 @@
   },
   "functions": {
     "hello": "Witaj ",
-    "title": "Panel zarządzania"
+    "title": "Panel zarządzania",
+    "temperature":"Temperatura",
+    "lights":"Oświetlenie",
+    "shades":"Rolety",
+    "dampness":"Wilgotność"
+  },
+  "footer": {
+    "group": "Projekt grupowy",
+    "about": "O nas",
+    "gallery": "Galeria",
+    "offer": "Oferta",
+    "contact": "Kontakt"
+  },
+  "contact": {
+    "contact": "Kontakt",
+    "mail": "Adres mailowy",
+    "phone": "Numer kontaktowy",
+    "address": "Adres firmy"
+  },
+  "gallery": {
+    "gallery": "Galeria",
+    "elements": "Zachęcamy do zapoznania się z elementami naszego stanowiska...",
+    "demo": "... oraz do obejrzenia krótkiego pokazu demonstrującego naszą pracę."
+  },
+  "temperature":{
+    "actual":"Aktualna temperatura"
+  },
+  "light":{
+    "control":"Sterowanie oświetleniem",
+    "use":"Użyj włącznika aby sterować oświetleniem!"
+  },
+  "cookies":{
+    "title":"Ta strona wykorzystuje pliki cookie",
+    "content":"Używamy informacji zapisanych za pomocą plików cookies w celu zapewnienia maksymalnej wygody w korzystaniu z naszego serwisu. Jeżeli wyrażasz zgodę na zapisywanie informacji zawartej w cookies kliknij na &bdquo;x&rdquo; w prawym górnym rogu tej informacji. Jeśli nie wyrażasz zgody, ustawienia dotyczące plików cookies możesz zmienić w swojej przeglądarce."
   }
 }

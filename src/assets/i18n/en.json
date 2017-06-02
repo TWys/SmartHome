@@ -24,6 +24,39 @@
   },
   "functions": {
     "hello": "Hello ",
-    "title": "Control panel"
+    "title": "Control panel",
+    "temperature": "Temperature",
+    "lights": "Lights",
+    "shades": "Shades",
+    "dampness": "Air dampness"
+  },
+  "footer": {
+    "group": "Group project",
+    "about": "About us",
+    "gallery": "Gallery",
+    "offer": "Offer",
+    "contact": "Contact"
+  },
+  "contact": {
+    "contact": "Contact",
+    "mail": "Mail address",
+    "phone": "Phone number",
+    "address": "Address"
+  },
+  "gallery": {
+    "gallery": "Gallery",
+    "elements": "Check all the elements of our workplace...",
+    "demo": "... and to watch a short demonstration of our work."
+  },
+  "temperature": {
+    "actual": "Actual temperature"
+  },
+  "light": {
+    "control": "Lights control",
+    "use": "Use the switch to control the lights!"
+  },
+  "cookies": {
+    "title": "This site uses cookies",
+    "content": "Our website uses cookies and other similar technologies to improve our site and your online experience. By continuing to use our website you consent to cookies being used."
   }
 }

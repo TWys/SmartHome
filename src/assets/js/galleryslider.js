@@ -5,6 +5,6 @@
 
 // jQuery(document).ready(function($) {
 
-$(document).ready(function () {
+$(document).ready(function(){
   $('.my-slider').unslider();
 });
