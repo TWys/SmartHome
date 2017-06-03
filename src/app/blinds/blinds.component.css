@@ -41,6 +41,15 @@
   flex-direction: column;
   align-items: center;
   height: 100%;
+  color: #444444 !important;
+}
+
+#blinds_down:hover {
+  color: #FFFFFF;
+}
+
+#blinds_up:hover {
+  color: #FFFFFF;
 }
 
 .fa {
@@ -64,7 +73,7 @@
 
   .set_blinds {
     height: 30px;
-    padding: 0px !important;
+    padding: 0 !important;
   }
 }
 
@@ -84,7 +93,7 @@
 
   .set_blinds {
     height: 30px;
-    padding: 0px !important;
+    padding: 0 !important;
   }
 }
 
