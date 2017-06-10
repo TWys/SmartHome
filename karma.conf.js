@@ -16,6 +16,8 @@ module.exports = function(config) {
     // list of files / patterns to load in the browser
     files: [
       "src/assets/js/jquery.min.js",   // Link do jquery
+      "src/app/*.ts",                   // Wszystkie pliki ts projektu
+      "src/app/*/.ts",                   // Wszystkie pliki ts projektu
       "src/app/*.js",                   // Wszystkie pliki js projektu
       "src/app/*/.js",                   // Wszystkie pliki js projektu
       "test/*.js",                     // Testy
