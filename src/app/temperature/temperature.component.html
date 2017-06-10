@@ -1,30 +1,26 @@
-<div class="temperatures">
-<div class="row description">
+
+<div class="row temperatures">
   <div class="col-xs-12">
-    Aktualna temperatura:
+    {{'temperature.actual' | translate}}:
   </div>
-  <!--<div class="col-sm-6">-->
-    <!--Ustaw temperaturę:-->
-  <!--</div>-->
-</div>
-<br />
-<div class="row datas">
-  <div class="col-xs-10 col-xs-push-1 col-sm-6 col-sm-push-3 col-md-8 col-md-push-2">
-    <div class="temperature_box" id="actual_temp">
-      {{actual_temp}} <span id="celcius">&deg;C</span>
+  <br/>
+  <div class="row datas">
+    <div class="col-xs-10 col-xs-push-1 col-sm-6 col-sm-push-3 col-md-8 col-md-push-2">
+      <div class="temperature_box" id="actual_temp">
+        {{actual_temp}} <span id="celcius">&deg;C</span>
+      </div>
+    </div>
+    <div class="col-sm-4 col-sm-push-3 hidden">
+      <div clas="row temperatures">
+        <div class="temperature_box">
+          {{setted_temp}} &deg;C
+        </div>
+      </div>
+      <br/>
+      <div class="row temperatures">
+        <button class="col-sm-6 set_temperature" id="temperature_minus" (click)="fSetTemperature('-')">-</button>
+        <button class="col-sm-6 set_temperature" id="temperature_plus" (click)="fSetTemperature('+')">+</button>
+      </div>
     </div>
   </div>
-  <!--<div class="col-sm-4 col-sm-push-3">-->
-    <!--<div clas="row temperatures">-->
-      <!--<div class="temperature_box">-->
-        <!--{{setted_temp}} &deg;C-->
-      <!--</div>-->
-    <!--</div>-->
-    <!--<br />-->
-    <!--<div class="row temperatures">-->
-      <!--<button class="col-sm-6 set_temperature" id="temperature_minus" (click)="fSetTemperature('-')">-</button><button class="col-sm-6 set_temperature" id="temperature_plus" (click)="fSetTemperature('+')">+</button>-->
-    <!--</div>-->
-  <!--</div>-->
 </div>
-</div>
-

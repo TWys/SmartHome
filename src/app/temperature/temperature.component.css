@@ -10,8 +10,12 @@
 }
 
 .description {
+  background-color: #444444;
   font-size: 25px;
-  padding-top: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 5px;
+  border-radius: 10px;
 }
 
 .temperature_box {
@@ -34,14 +38,9 @@
   border-top-right-radius: 25px;
 }
 
-/*#actual_temp {*/
-  /*color: darkgreen;*/
-/*}*/
-
 #celcius {
   color: white;
 }
-
 
 @media (max-width: 768px) {
   .description {

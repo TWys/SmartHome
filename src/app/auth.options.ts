@@ -5,8 +5,6 @@ export const options = {
     'google-oauth2',
     'facebook',
     'twitter',
-    // 'linkedin',
-    // 'github'
   ],
 
   language: 'pl',
@@ -16,14 +14,9 @@ export const options = {
     title: "Zaloguj się"
   },
 
-  // loginAfterSignUp: false,
 
   rememberLastLogin: false,
 
-  // additionalSignUpFields: [{
-  //     name: "full_name",
-  //     placeholder: "Enter your full name"
-  //   }],
 
   defaultADUsernameFromEmailPrefix: false
 
