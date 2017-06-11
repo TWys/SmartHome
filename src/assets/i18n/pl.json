@@ -18,9 +18,8 @@
     "offer": "Sprawdź naszą ofertę!"
   },
   "about": {
-    "title": "O nas",
-    "team": "Stanowimy profesjonalny zespół",
-    "students": "Studenci wydziału ETI kierunku Aplikacje i usługi internetowe"
+    "title": "Nasz zespół",
+    "team": "Jesteśmy studentami wydziału ETI kierunku Aplikacje i usługi internetowe"
   },
   "functions": {
     "hello": "Witaj ",
@@ -28,7 +27,18 @@
     "temperature":"Temperatura",
     "lights":"Oświetlenie",
     "shades":"Rolety",
-    "dampness":"Wilgotność"
+    "dampness":"Wilgotność",
+    "profile":"Informacja o profilu",
+    "profilename":"Nazwa profilu",
+    "screenname":"Nazwa widoku",
+    "firstname":"Imię",
+    "lastname":"Nazwisko",
+    "gender":"Płeć",
+    "age":"Wiek",
+    "email":"Adres email",
+    "nick":"Pseudonim",
+    "notloggedin":"Musisz się zalogować, aby kontynuować!"
+
   },
   "footer": {
     "group": "Projekt grupowy",
