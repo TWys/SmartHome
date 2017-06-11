@@ -3,10 +3,10 @@
     <div class="container">
 
       <div class="row status_bar">
-        <div class="status">Witaj <span class="user_name" (click)="fprofil(1)">{{auth.userProfile.name}}</span>!</div>
+        <div class="status">{{'functions.hello' | translate}}<span class="user_name" (click)="fprofil(1)">{{auth.userProfile.name}}</span>!</div>
       </div>
       <div class="row rect">
-        <div class="col-xs-12 col-sm-8 logo">{{title}}</div>
+        <div class="col-xs-12 col-sm-8 logo">{{'functions.title' | translate}}</div>
 
         <div class="hidden-xs col-sm-4 zegar" id='calendar'></div>
         <div style="clear:both;"></div>
@@ -48,7 +48,7 @@
       <div id="profile_container">
         <div class="row profile">
           <div class="col-xs-12">
-            <h2>Profile info</h2>
+            <h2>{{'functions.profile' | translate}}</h2>
             <button (click)="fprofil(0)">X</button>
             <br/><br/>
             <div class="col-xs-12 col-sm-4 profile_photo">
@@ -58,39 +58,39 @@
             <div class="col-xs-12 col-sm-8 profile_info">
               <form>
                 <div class="form-group row" *ngIf="auth.userProfile.name">
-                  <label class="col-xs-6 col-sm-5">Profile name: </label>
+                  <label class="col-xs-6 col-sm-5">{{'functions.profilename' | translate}}</label>
                   <p class="col-xs-6 col-sm-7">{{auth.userProfile.name}}</p>
                 </div>
                 <div class="form-group row" *ngIf="auth.userProfile.screen_name">
-                  <label class="col-xs-6 col-sm-5">Screen name:</label>
+                  <label class="col-xs-6 col-sm-5">{{'functions.screenname' | translate}}</label>
                   <p class="col-xs-6 col-sm-7">{{auth.userProfile.screen_name}}</p>
                 </div>
                 <div class="form-group row" *ngIf="auth.userProfile.given_name">
-                  <label class="col-xs-6 col-sm-5">First name:</label>
+                  <label class="col-xs-6 col-sm-5">{{'functions.firstname' | translate}}</label>
                   <p class="col-xs-6 col-sm-7">{{auth.userProfile.given_name}}</p>
                 </div>
                 <div class="form-group row" *ngIf="auth.userProfile.family_name">
-                  <label class="col-xs-6 col-sm-5">Last name:</label>
+                  <label class="col-xs-6 col-sm-5">{{'functions.lastname' | translate}}</label>
                   <p class="col-xs-6 col-sm-7">{{auth.userProfile.family_name}}</p>
                 </div>
                 <div class="form-group row" *ngIf="auth.userProfile.gender">
-                  <label class="col-xs-6 col-sm-5">Gender:</label>
+                  <label class="col-xs-6 col-sm-5">{{'functions.gender' | translate}}</label>
                   <p class="col-xs-6 col-sm-7">{{auth.userProfile.gender}}</p>
                 </div>
                 <div class="form-group row" *ngIf="auth.userProfile.gdy">
-                  <label class="col-xs-6 col-sm-5">Gender:</label>
+                  <label class="col-xs-6 col-sm-5">{{'functions.gender' | translate}}</label>
                   <p class="col-xs-6 col-sm-7">{{auth.userProfile.gdy}}</p>
                 </div>
                 <div class="form-group row" *ngIf="auth.userProfile.age">
-                  <label class="col-xs-6 col-sm-5">Age:</label>
+                  <label class="col-xs-6 col-sm-5">{{'functions.age' | translate}}</label>
                   <p class="col-xs-6 col-sm-7">{{auth.userProfile.age}}</p>
                 </div>
                 <div class="form-group row" *ngIf="auth.userProfile.email">
-                  <label class="col-xs-6 col-sm-5">E-mail:</label>
+                  <label class="col-xs-6 col-sm-5">{{'functions.email' | translate}}</label>
                   <p class="col-xs-6 col-sm-7">{{auth.userProfile.email}}</p>
                 </div>
                 <div class="form-group row" *ngIf="auth.userProfile.nickname">
-                  <label class="col-xs-6 col-sm-5">Nickname:</label>
+                  <label class="col-xs-6 col-sm-5">{{'functions.nick' | translate}}</label>
                   <p class="col-xs-6 col-sm-7">{{auth.userProfile.nickname}}</p>
                 </div>
               </form>
@@ -102,7 +102,7 @@
     </div>
   </div>
   <div *ngIf="!auth.authenticated()">
-    <h1>Sorry, you have to log in!</h1>
+    <h1>{{'functions.notloggedin' | translate}}</h1>
 
   </div>
 
