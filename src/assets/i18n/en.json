@@ -18,9 +18,8 @@
     "offer": "Check our offer!"
   },
   "about": {
-    "title": "About us",
-    "team": "We are a professional team",
-    "students": "Students of the Department of ETI in the field of Internet Applications and Services"
+    "title": "Our team",
+    "team": "We are students of the Department of ETI in the field of Internet Applications and Services"
   },
   "functions": {
     "hello": "Hello ",
@@ -28,7 +27,18 @@
     "temperature": "Temperature",
     "lights": "Lights",
     "shades": "Shades",
-    "dampness": "Air dampness"
+    "dampness": "Air dampness",
+    "profile":"Profile information",
+    "profilename":"Profile name",
+    "screenname":"Screen name",
+    "firstname":"Name",
+    "lastname":"Surname",
+    "gender":"Gender",
+    "age":"Age",
+    "email":"Email address",
+    "nick":"Nick",
+    "notloggedin":"Sorry, you have to log in!"
+
   },
   "footer": {
     "group": "Group project",
