@@ -7,6 +7,12 @@
   text-align: center;
   font-size: 25px;
   height: 150px !important;
+  display: flex;
+  flex-direction: column;
+}
+
+.display {
+  max-height: 150px!important;
 }
 
 .description {

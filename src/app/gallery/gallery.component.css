@@ -33,3 +33,100 @@ img {
   max-width: 90% !important;
   height: auto;
 }
+
+#slider {
+  overflow: hidden;
+  position: relative;
+  width: 50vw !important;
+  left:25%;
+}
+
+.slides, .slide {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.slides img {
+  margin: auto;
+  width: 100%;
+}
+
+.slide {
+  float: left;
+}
+
+#slider .toggles {
+  color: red;
+  height: 48px;
+  margin: auto;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  transition: all .3s linear;
+  width: 48px;
+  z-index: 1;
+}
+
+#slider .toggles:hover {
+  cursor: pointer;
+}
+
+#slider:hover .toggles {
+  opacity: 1;
+}
+
+#slider .toggles i:before {
+  margin: auto;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+}
+
+#slider #toggle-right i:before, #slider #toggle-left i:before {
+  height: 48px;
+  width: 18px;
+}
+
+#slider #pause-btn i:before {
+  height: 30px;
+  width: 28px;
+}
+
+#slider #play-btn i:before {
+  height: 48px;
+  width: 42px;
+}
+
+#toggle-right {
+  right: 20px;
+}
+
+#toggle-left {
+  left: 0;
+}
+
+#pause-btn {
+  right: 68px;
+}
+
+#play-btn {
+  left: 78px;
+}
+
+.slider-pages {
+  margin-top: 50px;
+  padding: 0;
+  text-align: center;
+}
+
+.slider-pages .slider-page {
+  display: inline-block;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
