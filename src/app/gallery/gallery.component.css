@@ -64,7 +64,7 @@ img {
   position: absolute;
   top: 0;
   bottom: 0;
-  transition: all .3s linear;
+  transition: all .2s linear;
   width: 48px;
   z-index: 1;
 }
@@ -88,7 +88,7 @@ img {
 }
 
 #slider #toggle-right i:before, #slider #toggle-left i:before {
-  height: 48px;
+  height: 52px;
   width: 18px;
 }
 
@@ -107,7 +107,7 @@ img {
 }
 
 #toggle-left {
-  left: 0;
+  left: -10px;
 }
 
 #pause-btn {
@@ -115,7 +115,7 @@ img {
 }
 
 #play-btn {
-  left: 78px;
+  left: 68px;
 }
 
 .slider-pages {
