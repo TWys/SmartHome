@@ -17,29 +17,29 @@ export class TemperatureComponent implements OnInit {
   constructor(private datasService: DatasService, private backend: MockBackend) {
   }
 
-  fShowInputBox () {
+  fShowInputBox() {
     document.getElementById('insert_setted_temp').style.display = 'block';
     document.getElementById('setted_temp').style.display = 'none';
+    document.getElementById('insert_setted_temp').focus();
   }
 
   fCloseInputBox() {
-  document.getElementById('insert_setted_temp').style.display = 'none';
-  document.getElementById('setted_temp').style.display = 'block';
+    document.getElementById('insert_setted_temp').style.display = 'none';
+    document.getElementById('setted_temp').style.display = 'block';
   }
 
-  fInsertTemperature(setted_temp_value){
-    this.setted_temp = setted_temp_value;
-    setTimeout(() => {
-      //console.log(this.setted_temp);
-      this.setted_temp = this.datasService.fSetTemperature(this.setted_temp);
+  fInsertTemperature(setted_temp_value) {
+    if (isNaN(setted_temp_value)) this.fCloseInputBox();
+    else if (!isNaN(setted_temp_value)) {
+      this.setted_temp = this.datasService.fSetTemperature(setted_temp_value);
       this.fCloseInputBox();
-    }, 500);
-
+    }
   }
 
   fSetTemperature(x) {
-    this.setted_temp=this.datasService.fSetTemperature(this.setted_temp, x);
-    console.log("temperatura= "+this.setted_temp);
+    if (this.setted_temp < 18) this.setted_temp = 18;
+    else if (this.setted_temp > 40) this.setted_temp = 40;
+    else this.setted_temp = this.datasService.fSetTemperature(this.setted_temp, x);
   }
 
   fGetActualTemperature() {

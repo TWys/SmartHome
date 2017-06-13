@@ -21,7 +21,9 @@ export class DatasService {
     this.datas.requeted_temp = value;
     if (sign == '+') this.datas.requeted_temp++;
     else if (sign == '-') this.datas.requeted_temp--;
-    else this.datas.requeted_temp = value;
+
+    if (this.datas.requeted_temp < 18) this.datas.requeted_temp = 18;
+    else if (this.datas.requeted_temp > 40) this.datas.requeted_temp = 40;
 
     return this.datas.requeted_temp;
   }
@@ -37,7 +39,9 @@ export class DatasService {
   fHttpTest() {
     this.http.get(this.TABLE_A_URL)
       .map(res => res.json())
-      .subscribe (data => console.log(data[0].cena));
+      .subscribe(data => console.log(data[0].cena));
+    //  .subscribe (data => this.datas.actual_temp = data[0].cena);
+    //return this.datas.actual_temp;
   }
 
   fGetHumidity() {

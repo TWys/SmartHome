@@ -17,11 +17,11 @@
       <button class="col-xs-6 set_temperature" id="temperature_plus" (click)="fSetTemperature('+')">+</button>
     </div>
     <div class="col-xs-8 col-xs-push-2 col-sm-8 col-sm-push-2 col-md-5 col-md-push-1 temperature_setting_box">
-      <div  id="setted_temp" (click)="fShowInputBox()">
+      <div  id="setted_temp" (click)="fShowInputBox()" (click)="temperatureinput.value=''">
         {{setted_temp}} &deg;C
       </div>
       <div>
-        <input class="col-xs-12" #temperatureinput type="text" id="insert_setted_temp"  (keyup)="fInsertTemperature(temperatureinput.value)">
+        <input class="col-xs-12" #temperatureinput type="text" id="insert_setted_temp"  (blur)="fInsertTemperature(temperatureinput.value)" (keyup.enter)="fInsertTemperature(temperatureinput.value)">
       </div>
     </div>
   </div>
