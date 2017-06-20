@@ -7,8 +7,16 @@ describe('smart-home App', function() {
     page = new SmartHomePage();
   });
 
-  it('should display message saying app works', () => {
+  // Sprawdzamy czy treść powitania jest poprawna
+  it('should display message: Bądź Mądry Jak Twój Dom!', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('app works!');
+    expect(page.getParagraphText()).toEqual('Bądź Mądry Jak Twój Dom!');
   });
+
+  // it('should display button: Sprawdź naszą ofertę!', () => {
+  //   page.navigateTo();
+  //   expect(page.getParagraphText()).toEqual('Sprawdź naszą ofertę!');
+  // });
+
+
 });

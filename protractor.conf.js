@@ -7,20 +7,8 @@ var SpecReporter = require('jasmine-spec-reporter');
 exports.config = {
   allScriptsTimeout: 11000,
   specs: [
-    './e2e/**/*.e2e-spec.ts'
-  ],
-
-  // list of files / patterns to load in the browser
-  files: [
-    "src/assets/js/jquery.min.js",   // Link do jquery
-    "src/app/*.ts",                   // Wszystkie pliki ts projektu
-    "src/app/*/.ts",                   // Wszystkie pliki ts projektu
-    "src/app/*.js",                   // Wszystkie pliki js projektu
-    "src/app/*/.js",                   // Wszystkie pliki js projektu
-    "test/*.js",                     // Testy
-    "test/test.js",                   // Test
-    "node_modules/angular/angular.js",
-    "node_modules/angular-mocks/angular-mocks.js",
+    './e2e/**/*.e2e-spec.ts',
+    './e2e/spec.js'
   ],
 
 
