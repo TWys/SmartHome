@@ -13,6 +13,10 @@
     "moduleResolution": "node",
     "outDir": "../dist/out-tsc",
     "sourceMap": true,
+    "paths": {
+      "@angular/*": ["../node_modules/@angular/*"],
+      "@ngrx/*": ["../node_modules/@ngrx/*"],
+      "rxjs/*": ["../node_modules/rxjs/*"]},
     "target": "es5",
     "typeRoots": [
       "../node_modules/@types"
