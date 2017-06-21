@@ -4,7 +4,7 @@ import {Auth} from '../auth.service';
 @Component({
   selector: 'app-functions',
   templateUrl: './functions.component.html',
-  styleUrls: ['./functions.component.css', '../../assets/bootstrap/css/bootstrap.css']
+  styleUrls: ['./functions.component.css', '../../assets/bootstrap/css/bootstrap.css', '../../assets/font-awesome/css/font-awesome.css', '../../assets/weather-icons/css/weather-icons.css']
 })
 export class FunctionsComponent implements OnInit {
 

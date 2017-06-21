@@ -3,7 +3,7 @@
   src: url(../../assets/font-awesome/fonts/digital.ttf);
 }
 
-.humidity {
+.pressure {
   text-align: center;
   height: 150px !important;
 }
@@ -17,7 +17,7 @@
   border-radius: 10px;
 }
 
-.humidity_box {
+.pressure_box {
   font-family: 'digital', monospace;
   background-color: #0f0f0f;
   border-radius: 10px;
