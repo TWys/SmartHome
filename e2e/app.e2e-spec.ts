@@ -1,6 +1,6 @@
 import { SmartHomePage } from './app.po';
 
-describe('smart-home App', function() {
+describe('Is app working?', function() {
   let page: SmartHomePage;
 
   beforeEach(() => {
@@ -12,11 +12,5 @@ describe('smart-home App', function() {
     page.navigateTo();
     expect(page.getParagraphText()).toEqual('Bądź Mądry Jak Twój Dom!');
   });
-
-  // it('should display button: Sprawdź naszą ofertę!', () => {
-  //   page.navigateTo();
-  //   expect(page.getParagraphText()).toEqual('Sprawdź naszą ofertę!');
-  // });
-
 
 });
