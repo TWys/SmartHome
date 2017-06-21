@@ -1,5 +1,22 @@
 section.gallery {
-  margin-top: 50px;
+  background:  #99E1FF;
+}
+section.gallery h1 {
+  font-size: 3.5em!important;
+  font-weight: bold;
+  text-transform: capitalize;
+  padding: 8vh 10vh 4vh;
+  text-align: center;
+  margin:0;
+  height: 198px;
+}
+section.gallery p {
+  color:#ffffff;
+  font-size: 2em;
+  font-weight: bold;
+}
+.col-xs-12{
+  background: #99E1FF;
 }
 
 .video-container {

@@ -6,7 +6,7 @@ import get = Reflect.get;
 @Component({
   selector: 'app-blinds',
   templateUrl: './blinds.component.html',
-  styleUrls: ['./blinds.component.css', '../../assets/bootstrap/css/bootstrap.css', '../../assets/font-awesome/css/font-awesome.css'],
+  styleUrls: ['./blinds.component.css', '../../assets/bootstrap/css/bootstrap.css'],
   providers: [DatasService, Datas]
 })
 export class BlindsComponent implements OnInit {

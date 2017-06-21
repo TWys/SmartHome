@@ -18,7 +18,6 @@ export class DatasService {
   constructor(public datas: Datas, private http: Http) {
   }
 
-
   fSetTemperature(value: number, sign?: string) {
     this.datas.requeted_temp = value;
     if (sign == '+') this.datas.requeted_temp++;

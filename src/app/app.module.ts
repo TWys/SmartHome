@@ -30,14 +30,11 @@ import {MockBackend} from "@angular/http/testing";
 import {OfferComponent} from './offer/offer.component';
 import {PressureComponent} from './pressure/pressure.component';
 import {BlindsComponent} from './blinds/blinds.component';
-// import {httpFactory} from "@angular/http/src/http_module";
 
-export function httpFactory(http: Http) {
-  return new TranslateStaticLoader(http, '/assets/i18n', '.json');
-}
+
+
 
 @NgModule({
-
   declarations: [
     AppComponent,
     ContactComponent,
@@ -63,9 +60,8 @@ export function httpFactory(http: Http) {
     routing,
     TranslateModule.forRoot({
       provide: TranslateLoader,
-    //   useFactory: (http: Http) => new TranslateStaticLoader(http, '/assets/i18n', '.json'),
-      useFactory: httpFactory,
-    deps: [Http]
+      useFactory: (http: Http) => new TranslateStaticLoader(http, '/assets/i18n', '.json'),
+      deps: [Http]
     })
   ],
   providers: [

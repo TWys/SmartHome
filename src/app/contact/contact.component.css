@@ -1,3 +1,23 @@
+section.contact{
+  min-width:95vh;
+  width:100%;
+  background: #99E1FF;
+}
+.contact h1{
+  font-weight: bold;
+  font-size: 3.5em;
+  text-transform: capitalize;
+  padding: 8vh 10vh;
+  text-align: center;
+  margin:0;
+}
+.col-xs-12{
+  background: #99E1FF;
+}
+
+div.col-xs-12.rect.no-padding h1{
+  padding-top:5vh;
+}
 #form_contact p, label, legend {
   font: 13px 'Open Sans', Arial, sans-serif;
   font-weight: 300;
@@ -18,7 +38,7 @@
   height: 90%;
   margin: 50px auto;
   padding: 35px;
-  background-color: #FFF;
+  background-color: transparent;
   -webkit-border-radius: 5px;
   color: black;
   max-width: 100% !important;
@@ -37,9 +57,8 @@
 #form_contact input, textarea, select {
   max-width: 100% !important;
   width: 400px;
-  margin: 0;
+
   padding: 10px;
-  color: #666;
   background: #fff;
   border: 1px solid #E5E5E5;
   margin: 5px;
@@ -55,7 +74,6 @@
 #form_contact input:focus, textarea:focus, select:focus {
   max-width: 100% !important;
   background-color: #fff;
-  color: #333;
   color: black;
 }
 
@@ -131,6 +149,15 @@ acronym {
 #dane h1, p, a {
   color: white;
 }
+#dane p {
+  font-size: 2em!important;
+  margin:0;
+}
+
+#dane p a{
+  color: white;
+
+}
 
 .video-container {
   position: relative;
@@ -155,4 +182,16 @@ acronym {
 
 .form-container iframe {
   width: 100% !important;
+  border-width: 0px;
+}
+.form-container iframe html{
+  background: transparent;
+}
+
+.video-container {
+  margin-bottom: 50px;
+
+}
+html, body{
+  background: transparent;
 }

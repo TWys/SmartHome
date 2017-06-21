@@ -1,5 +1,19 @@
 footer {
-font-size: 1em;
-  height: 40px;
-  margin-top: -40px;
+  font-size: 1em;
+  height: 50px;
+  margin-top: -50px;
+  padding: 0!important;
+  margin-bottom: 0!important;
+  margin-left: 0!important;
+  margin-right: 0!important;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #a0a0a0;
+}
+
+footer div{
+  position: relative;
+  top:11px;
 }
