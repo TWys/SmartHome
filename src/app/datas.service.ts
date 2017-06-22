@@ -9,11 +9,7 @@ export class DatasService {
 
   public response = '{"temperature": [{"actual": 25,"requested": 26}, {"actual": 24.5,"requested": 24}, {"actual": 18.9,"requested": 24},{"actual": 17.5,"requested": 24}, {"actual": 28.4,"requested": 24}, {"actual": 30.0,"requested": 24}, {"actual": 21.8,"requested": 24}, {"actual": 16.9,"requested": 24},{"actual": 27.1,"requested": 24}, {"actual": 16,"requested": 24}],"pressure": [{"actual": 60}, {"actual": 55}, {"actual": 57}, {"actual": 51}, {"actual": 48}]}';
 
-  TABLE_A_URL: string = 'http://api.nbp.pl/api/cenyzlota/2017-06-06?format=json';
-  // TABLE_A_URL: string = 'http://jsonplaceholder.typicode.com/posts';
-  // TABLE_A_URL: string = 'http://www.smhome.pl';
-  private wartosc;
-
+  API_URL: string = 'http://www.smhome.pl/skrypt.php';
 
   constructor(public datas: Datas, private http: Http) {
   }
@@ -40,26 +36,24 @@ export class DatasService {
 
   fHttpTest(name?: string, value?: number) {
     console.log ('warosci parametrów: '+name+', '+value);
-    // let username: string = 'serwer1734514';
-    // let password: string = 'Projekt2017';
 
-    var headers = new Headers();
-    headers.append('Content-Type', 'application/json');
+    let headers = new Headers({'Content-Type': 'application/x-www-form-urlencoded'});
+    let options = new RequestOptions({headers: headers});
+    let body = 'temp=' + 24;
 
-    // let dane = 'rolUp=' +1;
-
-    // return this.http.post(this.TABLE_A_URL, {title: 'foo', body: 'bar', userId: 1})
-    this.http.get(this.TABLE_A_URL)
+    this.http.post(this.API_URL, body, options)
       .map(res => res.json())
-      // .subscribe(data => console.log(data));
-     .subscribe (data => this.datas.actual_temp = data[0].cena);
-    //return this.datas.actual_temp;
+      .subscribe (data => {
+       this.datas.pressure = data.cisnienie_atm;
+       this.datas.light_status = data.swiatlo;
+       this.datas.actual_temp = data.akt_temp;
+       this.datas.requeted_temp = data.temp_ust;
+       // this.datas.blinds_status = data.rolety_Up(1)_Down(0);
+     });
   }
 
   fGetPressure() {
-    var x: number = Math.floor(Math.random() * (4 - 0 + 1) + 0);
-    this.datas.pressure = JSON.parse(this.response).pressure[x].actual;
-    this.fHttpTest('cisnienie');
+    this.fHttpTest();
     return this.datas.pressure;
   }
 

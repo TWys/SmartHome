@@ -3,4 +3,5 @@ export class Datas {
   public requeted_temp: number;
   public pressure: number;
   public light_status: number;
+  public blinds_status: number;
 }
