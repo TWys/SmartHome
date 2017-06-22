@@ -34,7 +34,7 @@
             <a id="functions_link" routerLink="functions" *ngIf="auth.authenticated()">{{  'navbar.functions' | translate   }}</a>
           </li>
           <li>
-            <div class="login-button">
+            <div id="login_link" class="login-button">
               <a (click)="auth.login()" *ngIf="!auth.authenticated()">{{  'navbar.signin' | translate }}</a>
               <a (click)="auth.logout()" *ngIf="auth.authenticated()">{{  'navbar.signout' | translate   }}</a>
             </div>

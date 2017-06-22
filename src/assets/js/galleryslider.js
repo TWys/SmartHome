@@ -1,8 +1,24 @@
-// $(document).ready(function(){
-//   $('.my-slider').unslider();
-// });
+// Reakcja na kliknięcie w link do Galerii
 
-window.onload = function() {
+document.getElementById("gallery_link").addEventListener("click", function () {
+  Slider();
+});
+
+// Blokowanie odświeżania
+
+function disableF5(keyboard) {
+  if ((keyboard.which || keyboard.keyCode) == 116 || (keyboard.which || keyboard.keyCode) == 82) {
+    keyboard.preventDefault();
+  }
+};
+
+$(document).ready(function(){
+  $(document).on("keydown", disableF5);
+});
+
+// Obsługa Slidera
+
+function Slider () {
 
   // Cache
   var $slider = $('#slider');
@@ -28,14 +44,7 @@ window.onload = function() {
   $slideContainer.css('width', width * $slides.length);
   $slideImg.css('width', width);
 
-  // Zatrzymanie pokazu
-  $pauseBtn.click(function () {
-    stopSlider();
-    $pauseBtn.toggle();
-    $playBtn.toggle();
-  });
-
-  // Wznowienie pokazu
+  // Uruchomienie pokazu
   $playBtn.click(function () {
     startSlider();
     $playBtn.toggle();
@@ -99,6 +108,7 @@ window.onload = function() {
     });
     startSlider();
   });
+
   function startSlider() {
     interval = setInterval(function () {
       $slideContainer.animate({
@@ -118,4 +128,5 @@ window.onload = function() {
     clearInterval(interval);
   }
 
-};
+}
+
