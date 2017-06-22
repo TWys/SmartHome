@@ -1,6 +1,10 @@
-body {
-  background-color: #303030;
-  color: #ffffff;
+section.offer{
+  width: 100%;
+}
+
+.body {
+  background-color:#cecffb;
+  color:darkblue;
   font-family: 'Lato', sans-serif;
   font-size: 20px;
 }
@@ -102,8 +106,9 @@ body {
 
 a {
   text-decoration: none;
-  color: #cccccc;
+  color: darkblue;
   font-weight: 700;
+  text-shadow:gray 10px 10px 7px;
 }
 
 .yt {
@@ -163,4 +168,10 @@ a {
   #logo {
     max-width: 90%;
   }
+}
+
+h1 {
+  color: darkblue;
+  text-shadow:gray 10px 10px 7px;
+
 }

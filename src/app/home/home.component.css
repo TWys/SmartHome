@@ -6,11 +6,13 @@
 .home {
   background: url(../../assets/img/sh.png)center/cover no-repeat;
   width: 100%;
-  min-height: 95vh;
-  margin-bottom: 40px;
+  min-height: 94.7vh;
+  max-height: 95vh;
+  margin-bottom: 50px;
 }
 
 .call-to-action h1 {
+  font-weight: bold;
   font-size: 3.5em;
   text-transform: capitalize;
   padding: 8vh 10vh;

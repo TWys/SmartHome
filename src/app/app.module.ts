@@ -28,8 +28,10 @@ import {TemperatureComponent} from './temperature/temperature.component';
 import {LightComponent} from './light/light.component';
 import {MockBackend} from "@angular/http/testing";
 import {OfferComponent} from './offer/offer.component';
-import {HumidityComponent} from './humidity/humidity.component';
+import {PressureComponent} from './pressure/pressure.component';
 import {BlindsComponent} from './blinds/blinds.component';
+
+
 
 
 @NgModule({
@@ -47,7 +49,7 @@ import {BlindsComponent} from './blinds/blinds.component';
     TemperatureComponent,
     LightComponent,
     OfferComponent,
-    HumidityComponent,
+    PressureComponent,
     BlindsComponent
 
   ],
@@ -69,8 +71,8 @@ import {BlindsComponent} from './blinds/blinds.component';
 
     {provide: MissingTranslationHandler, useClass: MyMissingTranslationHandler},
     MockBackend,
-    BaseRequestOptions
-  ],
+    BaseRequestOptions,
+    ],
   bootstrap: [AppComponent]
 
 })
