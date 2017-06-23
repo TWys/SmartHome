@@ -1,82 +1,100 @@
-import {Injectable} from '@angular/core';
+import {Injectable, OnInit} from '@angular/core';
 import {Observable} from "rxjs/Observable";
 import {Datas} from "./datas";
 import {Http, Headers, BaseRequestOptions, Response, ResponseOptions, RequestMethod, RequestOptions} from '@angular/http';
-import {MockBackend, MockConnection} from '@angular/http/testing';
+import 'rxjs/add/operator/toPromise';
 
 @Injectable()
-export class DatasService {
 
-  public response = '{"temperature": [{"actual": 25,"requested": 26}, {"actual": 24.5,"requested": 24}, {"actual": 18.9,"requested": 24},{"actual": 17.5,"requested": 24}, {"actual": 28.4,"requested": 24}, {"actual": 30.0,"requested": 24}, {"actual": 21.8,"requested": 24}, {"actual": 16.9,"requested": 24},{"actual": 27.1,"requested": 24}, {"actual": 16,"requested": 24}],"pressure": [{"actual": 60}, {"actual": 55}, {"actual": 57}, {"actual": 51}, {"actual": 48}]}';
+export class DatasService implements OnInit {
 
-  // TABLE_A_URL: string = 'http://api.nbp.pl/api/cenyzlota/2017-06-06?format=json';
-  // TABLE_A_URL: string = 'http://jsonplaceholder.typicode.com/posts';
-  TABLE_A_URL: string = 'http://www.smhome.pl';
-  private wartosc;
-
+  API_URL: string = 'http://www.smhome.pl/skrypt.php';
 
   constructor(public datas: Datas, private http: Http) {
   }
 
-  fSetTemperature(value: number, sign?: string) {
-    this.datas.requeted_temp = value;
-    if (sign == '+') this.datas.requeted_temp++;
-    else if (sign == '-') this.datas.requeted_temp--;
+  fHttpConnection(name?: string, value?: number) {
 
-    if (this.datas.requeted_temp < 18) this.datas.requeted_temp = 18;
-    else if (this.datas.requeted_temp > 40) this.datas.requeted_temp = 40;
+    let headers = new Headers({'Content-Type': 'application/x-www-form-urlencoded'});
+    let options = new RequestOptions({headers: headers});
+    let body = null;
+    if (name != null && value!= null)  {
+      body = name + '=' + value;
+    }
 
-    // this.fHttpTest('temp', this.datas.requeted_temp);
-    return this.datas.requeted_temp;
+    return this.http.post(this.API_URL, body, options)
+      .map(res => res.json())
+      .subscribe (data => {
+        this.datas.pressure = data.cisnienie_atm;
+        this.datas.light_status = parseInt(data.swiatlo_On_1_Off_0);
+        this.datas.actual_temp = parseInt(data.temp_akt);
+        this.datas.requeted_temp = parseInt(data.temp_ust);
+        this.datas.blinds_status = parseInt(data.rolety_Up_1_Down_0);
+        this.fGetBlindStatus();
+      });
+  }
+
+
+  fSetTemperature(value?: number, sign?: string) {
+    if(value == null) {
+      this.fHttpConnection();
+      return this.datas.requeted_temp;
+    }
+    else {
+      this.datas.requeted_temp = value;
+      if (sign == '+') this.datas.requeted_temp++;
+      else if (sign == '-') this.datas.requeted_temp--;
+
+      if (this.datas.requeted_temp < 18) this.datas.requeted_temp = 18;
+      else if (this.datas.requeted_temp > 40) this.datas.requeted_temp = 40;
+
+      this.fHttpConnection('temp', this.datas.requeted_temp);
+      return this.datas.requeted_temp;
+    }
   }
 
 
   fGetTemperature() {
-    var x: number = Math.floor(Math.random() * (9 - 0 + 1) + 0);
-    this.datas.actual_temp = JSON.parse(this.response).temperature[x].actual;
-    this.fHttpTest();
+    this.fHttpConnection();
     return this.datas.actual_temp;
   }
 
-  fHttpTest(name?: string, value?: number) {
-    // let username: string = 'serwer1734514';
-    // let password: string = 'Projekt2017';
-
-    var headers = new Headers();
-    headers.append('Content-Type', 'application/json');
-
-    // let dane = 'rolUp=' +1;
-
-    return this.http.post(this.TABLE_A_URL, {title: 'foo', body: 'bar', userId: 1})
-    // this.http.get(this.TABLE_A_URL)
-    //   .map(res => res.json())
-      .subscribe(data => console.log(data));
-    //  .subscribe (data => this.datas.actual_temp = data[0].cena);
-    //return this.datas.actual_temp;
-  }
 
   fGetPressure() {
-    var x: number = Math.floor(Math.random() * (4 - 0 + 1) + 0);
-    this.datas.pressure = JSON.parse(this.response).pressure[x].actual;
-    //this.fHttpTest();
+    this.fHttpConnection();
     return this.datas.pressure;
   }
 
-  fGetLightStatus(x) {
-    //this.fHttpTest();
-    if (x == 0) {
-      document.getElementById('bulb').style.fill = 'black';
-      return 0;
-    }
-    else if (x == 1) {
-      document.getElementById('bulb').style.fill = 'yellow';
-      return 1;
-    }
+  fSetLight(x?: number) {
+    this.fHttpConnection('light', x);
+    setTimeout(() => {
+      if (this.datas.light_status == 0) {
+        document.getElementById('bulb').style.fill = 'black';
+        document.getElementById('switcher_on').style.display = 'block';
+        document.getElementById('switcher_off').style.display = 'none';
+      }
+      else if (this.datas.light_status == 1) {
+        document.getElementById('bulb').style.fill = 'yellow';
+        document.getElementById('switcher_off').style.display = 'block';
+        document.getElementById('switcher_on').style.display = 'none';
+      };}, 500);
+    return x;
+  }
+
+  fGetBlindStatus() {
+    if (this.datas.blinds_status == 0) return "../../assets/img/blinds_closed.png";
+    else if (this.datas.blinds_status == 1) return "../../assets/img/blinds_opened.png";
   }
 
   fSetBlinds(x) {
-    //this.fHttpTest();
+    this.fHttpConnection('rolUp', x);
     if (x == 0) return "../../assets/img/gif/blinds_down.gif";
     else if (x == 1) return "../../assets/img/gif/blinds_up.gif";
   }
+
+  ngOnInit() {
+    this.fHttpConnection();
+  }
 }
+
+

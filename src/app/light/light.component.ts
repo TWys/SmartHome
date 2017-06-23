@@ -14,13 +14,14 @@ export class LightComponent implements OnInit {
   constructor(private datasService: DatasService) {
   }
 
-  public switcher_status = 0;
+  //public switcher_status = 0;
 
-  fswitch(x) {
-    this.switcher_status = this.datasService.fGetLightStatus(x);
+  fswitch(x?: number) {
+    this.datasService.fSetLight(x);
   }
 
   ngOnInit() {
+    this.datasService.fSetLight();
   }
 
 }

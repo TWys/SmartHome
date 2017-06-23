@@ -20,6 +20,14 @@
   transform: scale(0.5);
 }
 
+#switcher_off {
+  display: none;
+}
+
+#display_on {
+  display: none;
+}
+
 .bulb {
   transform: scale(0.5);
 }

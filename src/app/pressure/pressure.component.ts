@@ -9,7 +9,7 @@ import {Datas} from '../datas';
   providers: [DatasService, Datas]
 })
 export class PressureComponent implements OnInit {
-  private actual_pres: number;
+  private actual_pres: any;
   private timer;
 
   constructor(private datasService: DatasService) {
@@ -24,7 +24,10 @@ export class PressureComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.fGetActualPressure();
+    this.datasService.fHttpConnection();
+    setTimeout (() => {
+      this.fGetActualPressure();
+    }, 500);
   }
 
   ngOnDestroy() {
