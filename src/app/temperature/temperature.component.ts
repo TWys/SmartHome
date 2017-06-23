@@ -36,26 +36,27 @@ export class TemperatureComponent implements OnInit {
     }
   }
 
-  fSetTemperature(x) {
+  fSetTemperature(x?) {
     if (this.setted_temp < 18) this.setted_temp = 18;
     else if (this.setted_temp > 40) this.setted_temp = 40;
     else this.setted_temp = this.datasService.fSetTemperature(this.setted_temp, x);
   }
 
-  fGetActualTemperature() {
+  fGetTemperatures() {
     this.actual_temp = this.datasService.fGetTemperature();
+    this.setted_temp = this.datasService.fSetTemperature();
     //this.setted_temp = this.actual_temp;
     //if (this.actual_temp % 1 == 0) this.actual_temp = this.actual_temp + '.0';
 
 
     this.timer = setTimeout(() => {
-      this.fGetActualTemperature();
+      this.fGetTemperatures();
     }, 5000);
   }
 
   ngOnInit() {
-    this.fGetActualTemperature();
-    this.setted_temp = this.actual_temp;
+    this.fGetTemperatures();
+    this.datasService.fSetTemperature();
   }
 
   ngOnDestroy() {

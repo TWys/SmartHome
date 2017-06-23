@@ -16,11 +16,12 @@ export class LightComponent implements OnInit {
 
   public switcher_status = 0;
 
-  fswitch(x) {
-    this.switcher_status = this.datasService.fGetLightStatus(x);
+  fswitch(x?: number) {
+    this.switcher_status = this.datasService.fSetLightStatus(x);
   }
 
   ngOnInit() {
+    this.datasService.fSetLightStatus();
   }
 
 }
