@@ -213,3 +213,7 @@ fieldset[disabled] .btn-default.focus {
 button.btn.btn-primary.btn-lg:hover{
   color:#fff;
 }
+
+.offer-btn{
+  margin-bottom: 100px;
+}
