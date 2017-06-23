@@ -24,8 +24,10 @@ export class PressureComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.actual_pres = this.datasService.datas.pressure;
-    this.fGetActualPressure();
+    this.datasService.fHttpConnection();
+    setTimeout (() => {
+      this.fGetActualPressure();
+    }, 500);
   }
 
   ngOnDestroy() {

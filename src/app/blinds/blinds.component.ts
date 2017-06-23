@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {DatasService} from '../datas.service';
 import {Datas} from '../datas';
 import get = Reflect.get;
+import {setTimeout} from "timers";
 
 @Component({
   selector: 'app-blinds',
@@ -18,14 +19,19 @@ export class BlindsComponent implements OnInit {
   private imgSRC = "../../assets/img/blinds_closed.png";
 
   fSetBlinds(x) {
-    if (this.blinds_status == x) return;
+    if (this.datasService.datas.blinds_status == x) return;
     else {
       this.imgSRC = this.datasService.fSetBlinds(x);
-      this.blinds_status = x;
     }
   }
 
   ngOnInit() {
+    // this.imgSRC = "../../assets/img/blinds_closed.png";
+    this.datasService.fHttpConnection();
+    setTimeout (() => {
+      this.imgSRC = this.datasService.fGetBlindStatus();
+      this.blinds_status = this.datasService.datas.blinds_status;
+    }, 500);
   }
 
 }

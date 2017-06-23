@@ -55,8 +55,12 @@ export class TemperatureComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.fGetTemperatures();
-    this.datasService.fSetTemperature();
+    this.datasService.fHttpConnection();
+    setTimeout (() => {
+      this.fGetTemperatures();
+      this.datasService.fSetTemperature();
+    }, 500);
+
   }
 
   ngOnDestroy() {
