@@ -27,7 +27,7 @@
     "temperature":"Temperatura",
     "lights":"Oświetlenie",
     "shades":"Rolety",
-    "dampness":"Wilgotność",
+    "dampness":"Ciśnienie",
     "profile":"Informacja o profilu",
     "profilename":"Nazwa profilu",
     "screenname":"Nazwa widoku",
@@ -68,5 +68,13 @@
   "cookies":{
     "title":"Ta strona wykorzystuje pliki cookie",
     "content":"Używamy informacji zapisanych za pomocą plików cookies w celu zapewnienia maksymalnej wygody w korzystaniu z naszego serwisu. Jeżeli wyrażasz zgodę na zapisywanie informacji zawartej w cookies kliknij na &bdquo;x&rdquo; w prawym górnym rogu tej informacji. Jeśli nie wyrażasz zgody, ustawienia dotyczące plików cookies możesz zmienić w swojej przeglądarce."
+  },
+  "offer":{
+    "offer":"Ofetra",
+    "slogan":"SmartHome oferuje następujące pakiety:",
+    "start":"Zawiera mechanizmy umożliwiające pomiar oraz sterowanie temperaturą i oświetleniem.",
+    "premium":"Zawiera mechanizmy umożliwiające pomiar oraz sterowanie temperaturą i oświetleniem a także mechanizmy sterowania roletami, pomiaru wilgotności, parametrów energii oraz system powiadomień.",
+    "client":"Każdego klienta traktujemy indywidualnie i dobieramy odpowiednie komponenty w zależności od potrzeb klienta!",
+ "button":"Skontakuj się z nami!"
   }
 }

@@ -27,7 +27,7 @@
     "temperature": "Temperature",
     "lights": "Lights",
     "shades": "Shades",
-    "dampness": "Air dampness",
+    "dampness": "Pressure",
     "profile":"Profile information",
     "profilename":"Profile name",
     "screenname":"Screen name",
@@ -68,5 +68,13 @@
   "cookies": {
     "title": "This site uses cookies",
     "content": "Our website uses cookies and other similar technologies to improve our site and your online experience. By continuing to use our website you consent to cookies being used."
+  },
+  "offer":{
+    "offer":"Offer",
+    "slogan":"SmartHome offers the following packages:",
+    "start":"Includes mechanisms for measuring and controlling temperature and lighting.",
+    "premium":"Includes mechanisms for measuring and controlling temperature and lighting, as well as blinds control, humidity measurement, energy parameters and notification systems.",
+    "client":"Every customer is treated individually and we select the appropriate components depending on the customer's needs!",
+    "button":"Contact us!"
   }
 }
