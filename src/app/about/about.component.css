@@ -1,0 +1,35 @@
+.about{
+  background: url(../../assets/img/team.jpg)center/cover no-repeat;
+  width: 100%;
+  min-height: 94.7vh;
+  max-height: 95vh;
+  color:#fff;
+  margin-bottom: 50px;
+}
+
+.about h3 {
+  font-size: 2em!important;
+  margin:0;
+}
+
+.about p:last-of-type {
+  padding-top: 5%;
+  font-weight: normal;
+  letter-spacing: 0;
+  margin-bottom: 0;
+}
+
+.about h1{
+  font-size: 3.5em;
+  text-transform: capitalize;
+  padding: 8vh 10vh 4vh;
+  text-align: center;
+  margin:0;
+}
+
+@media (max-width: 1024px) {
+  .about h1 {
+    padding-top: 12%;
+  }
+}
+

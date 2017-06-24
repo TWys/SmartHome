@@ -1,0 +1,234 @@
+section.functions {
+  margin-top: 50px;
+  background: url(../../assets/img/house-bw.jpg) center center no-repeat;
+  color: #ffffff;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+html {
+  width: 98%;
+}
+
+body {
+  background-color: #303030;
+  color: #ffffff;
+  font-family: 'Lato', sans-serif;
+  font-size: 20px;
+}
+
+.container {
+  width: 95% !important;
+}
+
+.rect {
+  margin: 20px;
+  text-align: center;
+}
+
+.display {
+  float: left;
+}
+
+.logo {
+  float: left;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 60px;
+  text-align: left;
+}
+
+.logo a:hover {
+  color: #ffffff;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.status_bar {
+  float: right;
+}
+
+.status {
+  text-align: right;
+  padding-right: 15px;
+  display: inline-block;
+  font-size: 15px;
+}
+
+.user_name {
+  font-weight: bold;
+}
+
+.user_name:hover {
+  cursor: pointer;
+}
+
+.flag {
+  padding: 2px;
+  display: inline-block;
+  height: 20px;
+}
+
+.flag:hover {
+  border: 2px solid blue !important;
+}
+
+.zegar {
+  float: left;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 20px;
+  text-align: right;
+  line-height: 85px;
+}
+
+.clock {
+  font-family: 'Orbitron', sans-serif;
+  color: lightgreen;
+}
+
+.tile1 {
+  margin: 10px;
+  height: 142px;
+  background-color: #3095d3;
+  float: left;
+  text-align: center;
+}
+
+.tile1:hover {
+  background-color: #2084c2;
+  cursor: pointer;
+}
+
+.tile2 {
+  margin: 10px;
+  height: 142px;
+  background-color: #666666;
+  float: left;
+  text-align: center;
+}
+
+.tile2:hover {
+  background-color: #555555;
+  cursor: pointer;
+}
+
+.tile3 {
+  margin: 10px;
+  height: 142px;
+  background-color: #93c748;
+  text-align: center;
+}
+
+.tile3:hover {
+  background-color: #82b637;
+  cursor: pointer;
+}
+
+.tile4 {
+  margin: 10px;
+  background-color: #ee5a32;
+  text-align: center;
+  font-size: 26px;
+  padding: 30px;
+  line-height: 150%;
+}
+
+.tile5 {
+  background-color: #666666;
+  border-radius: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.footer {
+  margin: 20px;
+  text-align: center;
+}
+
+.fa {
+  font-size: 60px !important;
+  padding-top: 30px;
+}
+
+.mapa {
+  text-align: center !important;
+  margin: 0 auto !important;
+}
+
+#profile_container {
+  display: none;
+  text-align: center;
+  background-color: #181818;
+  opacity: 0.99;
+  position: absolute;
+  top: 50px;
+  right: 15px;
+  left: 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.profile button {
+  display: block;
+  position: absolute;
+  right: 20px;
+  top: -5px;
+  width: 22px;
+  height: 22px;
+  border: 0;
+  border-radius: 11px;
+  line-height: 22px;
+  font-size: 12px;
+  color: #181818;
+  text-align: center;
+  text-decoration: none;
+  background-color: white;
+}
+
+.profile-img {
+  height: 150px;
+}
+
+.profile_info {
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  .logo {
+    font-size: 40px;
+    text-align: center;
+  }
+
+  .footer {
+    font-size: 15px;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .tile5 {
+    height: 60vw;
+  }
+}
+
+@media screen and (min-width: 375px) and (max-width: 555px) {
+  .tile5 {
+    height: 200px;
+  }
+}
+
+@media screen and (min-width: 555px) and (max-width: 991px) {
+  .tile5 {
+    height: 35vw;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .tile5 {
+    /*height: 15vw;*/
+    /*padding-top: 0.15vw;*/
+  }
+}

@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.home {
+  background: url(../../assets/img/sh.png)center/cover no-repeat;
+  width: 100%;
+  min-height: 94.7vh;
+  max-height: 95vh;
+  margin-bottom: 50px;
+}
+
+.call-to-action h1 {
+  font-weight: bold;
+  font-size: 3.5em;
+  text-transform: capitalize;
+  padding: 8vh 10vh;
+  text-align: center;
+  margin-top:0;
+}
+
+.call-to-action p {
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.call-to-action p button{
+  font-size: 1.25em;
+}

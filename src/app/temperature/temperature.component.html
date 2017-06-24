@@ -1,0 +1,28 @@
+<div class="row temperatures">
+  <div class="col-xs-12 description">
+    {{'temperature.actual' | translate}}:
+  </div>
+  <br/>
+  <div class="row datas">
+    <div class="col-xs-10 col-xs-push-1 col-sm-8 col-sm-push-2 col-md-8 col-md-push-2">
+      <div class="temperature_box" id="actual_temp">
+        {{actual_temp}} <span id="celcius">&deg;C</span>
+      </div>
+    </div>
+  </div>
+  <br/>
+  <div class="row datas">
+    <div class="col-xs-8 col-xs-push-2 col-sm-8 col-sm-push-2 col-md-5 col-md-push-1 buttons">
+      <button class="col-xs-6 set_temperature" id="temperature_minus" (click)="fSetTemperature('-')">-</button>
+      <button class="col-xs-6 set_temperature" id="temperature_plus" (click)="fSetTemperature('+')">+</button>
+    </div>
+    <div class="col-xs-8 col-xs-push-2 col-sm-8 col-sm-push-2 col-md-5 col-md-push-1 temperature_setting_box">
+      <div  id="setted_temp" (click)="fShowInputBox()" (click)="temperatureinput.value=''">
+        {{setted_temp}} &deg;C
+      </div>
+      <div>
+        <input class="col-xs-12" #temperatureinput type="text" id="insert_setted_temp"  (blur)="fInsertTemperature(temperatureinput.value)" (keyup.enter)="fInsertTemperature(temperatureinput.value)">
+      </div>
+    </div>
+  </div>
+</div>

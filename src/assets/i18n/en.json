@@ -1,0 +1,80 @@
+{
+  "navbar": {
+    "about": "About us",
+    "gallery": "Gallery",
+    "offer": "Offer",
+    "contact": "Contact",
+    "language": "Language",
+    "functions": "Functions",
+    "signin": "Sign In",
+    "signout": "Sign Out"
+  },
+  "languages": {
+    "english": "English",
+    "polish": "Polish"
+  },
+  "home": {
+    "slogan": "Be smart like your home!",
+    "offer": "Check our offer!"
+  },
+  "about": {
+    "title": "Our team",
+    "team": "We are students of the Department of ETI in the field of Internet Applications and Services"
+  },
+  "functions": {
+    "hello": "Hello ",
+    "title": "Control panel",
+    "temperature": "Temperature",
+    "lights": "Lights",
+    "shades": "Shades",
+    "dampness": "Pressure",
+    "profile":"Profile information",
+    "profilename":"Profile name",
+    "screenname":"Screen name",
+    "firstname":"Name",
+    "lastname":"Surname",
+    "gender":"Gender",
+    "age":"Age",
+    "email":"Email address",
+    "nick":"Nick",
+    "notloggedin":"Sorry, you have to log in!"
+
+  },
+  "footer": {
+    "group": "Group project",
+    "about": "About us",
+    "gallery": "Gallery",
+    "offer": "Offer",
+    "contact": "Contact"
+  },
+  "contact": {
+    "contact": "Contact",
+    "mail": "Mail address",
+    "phone": "Phone number",
+    "address": "Address"
+  },
+  "gallery": {
+    "gallery": "Gallery",
+    "elements": "Check all the elements of our workplace...",
+    "demo": "... and to watch a short demonstration of our work."
+  },
+  "temperature": {
+    "actual": "Actual temperature"
+  },
+  "light": {
+    "control": "Lights control",
+    "use": "Use the switch to control the lights!"
+  },
+  "cookies": {
+    "title": "This site uses cookies",
+    "content": "Our website uses cookies and other similar technologies to improve our site and your online experience. By continuing to use our website you consent to cookies being used."
+  },
+  "offer":{
+    "offer":"Offer",
+    "slogan":"SmartHome offers the following packages:",
+    "start":"Includes mechanisms for measuring and controlling temperature and lighting.",
+    "premium":"Includes mechanisms for measuring and controlling temperature and lighting, as well as blinds control, humidity measurement, energy parameters and notification systems.",
+    "client":"Every customer is treated individually and we select the appropriate components depending on the customer's needs!",
+    "button":"Contact us!"
+  }
+}

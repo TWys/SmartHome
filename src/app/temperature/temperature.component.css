@@ -1,0 +1,94 @@
+@font-face {
+  font-family: digital;
+  src: url(../../assets/font-awesome/fonts/digital.ttf);
+}
+
+.temperatures {
+  text-align: center;
+  font-size: 25px;
+  height: 150px !important;
+}
+
+.display {
+  max-height: 150px!important;
+}
+
+.description {
+  background-color: #444444;
+  font-size: 25px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 5px;
+  border-radius: 10px;
+}
+
+.temperature_box {
+  font-family: 'digital', monospace;
+  background-color: #0f0f0f;
+  border-radius: 10px;
+  font-size: 50px;
+  line-height: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+}
+
+.temperature_setting_box {
+  font-family: 'digital', monospace;
+  background-color: #0f0f0f;
+  border-radius: 10px;
+  font-size: 35px;
+  line-height: 35px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+}
+
+.temperature_setting_box input {
+  font-family: 'digital', monospace;
+  background-color: #0f0f0f;
+  border-radius: 10px;
+  font-size: 35px;
+  line-height: 35px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.buttons {
+  margin-bottom: 10px;
+}
+
+#setted_temp {
+  font-size: 30px;
+}
+
+#insert_setted_temp {
+  font-size: 30px;
+  line-height: 35px;
+  border: none;
+  text-align: center;
+  display: none;
+}
+
+#temperature_minus {
+  border-bottom-left-radius: 25px;
+  border-top-left-radius: 25px;
+}
+
+#temperature_plus {
+  border-bottom-right-radius: 25px;
+  border-top-right-radius: 25px;
+}
+
+#celcius {
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .description {
+    font-size: 20px;
+  }
+  .buttons {
+    margin-top: -30px;
+  }
+}

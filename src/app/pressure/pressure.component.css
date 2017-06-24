@@ -1,0 +1,34 @@
+@font-face {
+  font-family: digital;
+  src: url(../../assets/font-awesome/fonts/digital.ttf);
+}
+
+.pressure {
+  text-align: center;
+  height: 150px !important;
+}
+
+.description {
+  background-color: #444444;
+  font-size: 25px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 5px;
+  border-radius: 10px;
+}
+
+.pressure_box {
+  font-family: 'digital', monospace;
+  background-color: #0f0f0f;
+  border-radius: 10px;
+  font-size: 50px;
+  line-height: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 768px) {
+  .description {
+    font-size: 20px;
+  }
+}

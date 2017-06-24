@@ -1,0 +1,123 @@
+@import '../../assets/font-awesome/css/font-awesome.css';
+
+.blinds_img {
+  max-width: 80%;
+  padding-bottom: 10px;
+}
+
+.description {
+  text-align: center;
+  background-color: #444444;
+  font-size: 25px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 5px;
+  border-radius: 10px;
+}
+
+.blinds {
+  text-align: center;
+}
+
+.blinds_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#blinds_down {
+  margin-top: 10px;
+}
+
+.datas {
+  display: flex;
+  align-items: center;
+}
+
+.buttons {
+  text-align: center;
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  color: #444444 !important;
+}
+
+#blinds_down:hover {
+  color: #FFFFFF;
+}
+
+#blinds_up:hover {
+  color: #FFFFFF;
+}
+
+.fa {
+  font-size: 25px !important;
+}
+
+@media screen and (max-width: 375px) {
+  .blinds_img {
+    max-width: 80%;
+    margin-top: 10px;
+  }
+
+  .buttons {
+    font-size: 10px !important;
+    margin-top: -10px;
+  }
+
+  .description {
+    font-size: 20px;
+  }
+
+  .set_blinds {
+    height: 30px;
+    padding: 0 !important;
+  }
+}
+
+@media screen and (min-width: 375px) and (max-width: 425px) {
+  .blinds_img {
+    max-width: 60%;
+    margin-top: 10px;
+  }
+
+  .buttons {
+    margin-top: -10px;
+  }
+
+  .description {
+    font-size: 20px;
+  }
+
+  .set_blinds {
+    height: 30px;
+    padding: 0 !important;
+  }
+}
+
+@media screen and (min-width: 426px) and (max-width: 767px) {
+  .blinds_img {
+    max-width: 60%;
+    margin-top: 10px;
+  }
+
+  .buttons {
+    margin-top: -5px;
+  }
+
+  .description {
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .blinds_img {
+    max-width: 60%;
+  }
+
+  .set_blinds {
+    font-size: 20px;
+  }
+}

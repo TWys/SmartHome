@@ -1,0 +1,99 @@
+.light {
+  text-align: center;
+  height: 20vw;
+}
+
+.description {
+  background-color: #444444;
+  font-size: 25px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 5px;
+  border-radius: 10px;
+}
+
+.datas {
+  padding-bottom: 10px;
+}
+
+.switcher {
+  transform: scale(0.5);
+}
+
+#switcher_off {
+  display: none;
+}
+
+#display_on {
+  display: none;
+}
+
+.bulb {
+  transform: scale(0.5);
+}
+
+#turn_off:hover {
+  cursor: pointer;
+}
+
+#turn_on:hover {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .bulb {
+    height: 20vw;
+  }
+
+  .switcher {
+    height: 20vw;
+  }
+
+  .description {
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 425px) and (max-width: 991px) {
+  .bulb {
+    height: 10vw;
+  }
+
+  .switcher {
+    height: 10vw;
+  }
+
+  .description {
+  }
+
+  .datas {
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1220px) {
+  .bulb {
+    transform: scale(0.55);
+  }
+
+  .switcher {
+    transform: scale(0.55);
+  }
+
+  .datas {
+    padding-top: 10px;
+  }
+}
+
+@media screen and (min-width: 1220px) {
+  .bulb {
+    transform: scale(0.55);
+  }
+
+  .switcher {
+    transform: scale(0.55);
+  }
+
+  .datas {
+    padding-top: 10px;
+  }
+}

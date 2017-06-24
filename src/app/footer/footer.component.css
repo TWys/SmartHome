@@ -1,0 +1,21 @@
+footer {
+  font-size: 1em;
+  height: 50px;
+  margin-top: -50px;
+  padding: 0!important;
+  margin-bottom: 0!important;
+  margin-left: 0!important;
+  margin-right: 0!important;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #a0a0a0;
+  width:100vw;
+}
+
+footer div{
+  position: relative;
+  width:100%;
+  top:11px;
+}

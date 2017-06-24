@@ -22,7 +22,7 @@ Celem jest stworzenie aplikacji aplikacji do sterowania budynkiem inteligentnym.
 
 **Wykorzystywane technologie**
 
-HTML, CSS, JS, Bootstrap, SASS, PHP + MySQL, AJAX, Angular2, GRUNT
+HTML, CSS, JS, Bootstrap, SASS, PHP + MySQL, Angular2
 
 
 # LISTA ODNOŚNIKÓW
