@@ -1,8 +1,9 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 import {FormsModule} from '@angular/forms';
-import {HttpModule, Http, BaseRequestOptions} from '@angular/http';
-import {AUTH_PROVIDERS} from 'angular2-jwt';
+import {HttpModule, Http, BaseRequestOptions, RequestOptions} from '@angular/http';
+import { provideAuth, AuthHttp, AuthConfig } from 'angular2-jwt';
+
 import {
   TranslateService,
   TranslateModule,
@@ -31,7 +32,13 @@ import {OfferComponent} from './offer/offer.component';
 import {PressureComponent} from './pressure/pressure.component';
 import {BlindsComponent} from './blinds/blinds.component';
 
+export function httpFactory(http: Http) {
+  return new TranslateStaticLoader(http, '/assets/i18n', '.json');
+}
 
+export function authHttpServiceFactory(http: Http, options: RequestOptions) {
+  return new AuthHttp( new AuthConfig({}), http, options);
+}
 
 
 @NgModule({
@@ -60,19 +67,23 @@ import {BlindsComponent} from './blinds/blinds.component';
     routing,
     TranslateModule.forRoot({
       provide: TranslateLoader,
-      useFactory: (http: Http) => new TranslateStaticLoader(http, '/assets/i18n', '.json'),
+      useFactory: httpFactory,
       deps: [Http]
     })
   ],
   providers: [
     appRoutingProviders,
-    AUTH_PROVIDERS,
     TranslateService,
+    {
+      provide: AuthHttp,
+      useFactory: authHttpServiceFactory,
+      deps: [ Http, RequestOptions ]
+    },
 
     {provide: MissingTranslationHandler, useClass: MyMissingTranslationHandler},
     MockBackend,
     BaseRequestOptions,
-    ],
+  ],
   bootstrap: [AppComponent]
 
 })
