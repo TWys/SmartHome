@@ -1,0 +1,80 @@
+{
+  "navbar": {
+    "about": "O nas",
+    "gallery": "Galeria",
+    "offer": "Oferta",
+    "contact": "Kontakt",
+    "language": "Język",
+    "functions": "Funkcje",
+    "signin": "Zaloguj",
+    "signout": "Wyloguj"
+  },
+  "languages": {
+    "english": "Angielski",
+    "polish": "Polski"
+  },
+  "home": {
+    "slogan": "Bądź mądry jak Twój dom!",
+    "offer": "Sprawdź naszą ofertę!"
+  },
+  "about": {
+    "title": "Nasz zespół",
+    "team": "Jesteśmy studentami wydziału ETI kierunku Aplikacje i usługi internetowe"
+  },
+  "functions": {
+    "hello": "Witaj ",
+    "title": "Panel zarządzania",
+    "temperature":"Temperatura",
+    "lights":"Oświetlenie",
+    "shades":"Rolety",
+    "dampness":"Ciśnienie",
+    "profile":"Informacja o profilu",
+    "profilename":"Nazwa profilu",
+    "screenname":"Nazwa widoku",
+    "firstname":"Imię",
+    "lastname":"Nazwisko",
+    "gender":"Płeć",
+    "age":"Wiek",
+    "email":"Adres email",
+    "nick":"Pseudonim",
+    "notloggedin":"Musisz się zalogować, aby kontynuować!"
+
+  },
+  "footer": {
+    "group": "Projekt grupowy",
+    "about": "O nas",
+    "gallery": "Galeria",
+    "offer": "Oferta",
+    "contact": "Kontakt"
+  },
+  "contact": {
+    "contact": "Kontakt",
+    "mail": "Adres mailowy",
+    "phone": "Numer kontaktowy",
+    "address": "Adres firmy"
+  },
+  "gallery": {
+    "gallery": "Galeria",
+    "elements": "Zachęcamy do zapoznania się z elementami naszego stanowiska...",
+    "demo": "... oraz do obejrzenia krótkiego pokazu demonstrującego naszą pracę."
+  },
+  "temperature":{
+    "actual":"Aktualna temperatura"
+  },
+  "light":{
+    "control":"Sterowanie oświetleniem",
+    "use":"Użyj włącznika aby sterować oświetleniem!"
+  },
+  "cookies":{
+    "title":"Ta strona wykorzystuje pliki cookie",
+    "content":"Używamy informacji zapisanych za pomocą plików cookies w celu zapewnienia maksymalnej wygody w korzystaniu z naszego serwisu. Jeżeli wyrażasz zgodę na zapisywanie informacji zawartej w cookies kliknij na &bdquo;x&rdquo; w prawym górnym rogu tej informacji. Jeśli nie wyrażasz zgody, ustawienia dotyczące plików cookies możesz zmienić w swojej przeglądarce."
+  },
+  "offer":{
+    "offer":"Ofetra",
+    "slogan":"SmartHome oferuje następujące pakiety:",
+    "start":"Zawiera mechanizmy umożliwiające pomiar oraz sterowanie temperaturą i oświetleniem.",
+    "premium":"Zawiera mechanizmy umożliwiające pomiar oraz sterowanie temperaturą i oświetleniem a także mechanizmy sterowania roletami, pomiaru wilgotności, parametrów energii oraz system powiadomień.",
+    "client":"Każdego klienta traktujemy indywidualnie i dobieramy odpowiednie komponenty w zależności od potrzeb klienta!",
+ "button":"Skontakuj się z nami!"
+  }
+}

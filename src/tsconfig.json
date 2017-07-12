@@ -11,7 +11,7 @@
     "mapRoot": "./",
     "module": "es6",
     "moduleResolution": "node",
-    "outDir": "../dist/out-tsc",
+    "outDir": "../docs/out-tsc",
     "sourceMap": true,
     "paths": {
       "@angular/*": ["../node_modules/@angular/*"],
